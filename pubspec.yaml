@@ -37,6 +37,7 @@ dependencies:
   otp_text_field: ^1.1.3
   charts_flutter:
   syncfusion_flutter_charts:
+  pie_chart:
 
 dev_dependencies:
   flutter_test:
@@ -64,6 +65,7 @@ flutter:
   assets:
    - assets/illustration.png
    - assets/Ellipse.png
+   - assets/image 7.png
 
 
   # An image asset can refer to one or more resolution-specific "variants", see

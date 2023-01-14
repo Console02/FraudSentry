@@ -64,6 +64,7 @@ flutter:
   assets:
    - assets/illustration.png
    - assets/Ellipse.png
+   - assets/profile_img/
 
 
   # An image asset can refer to one or more resolution-specific "variants", see

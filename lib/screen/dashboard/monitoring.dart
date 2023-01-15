@@ -95,8 +95,8 @@ class _monitoringPageState extends State<monitoringPage> {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.white,
-        title: Padding(
-          padding: const EdgeInsets.only(right: 5, top: 20, left: 20),
+        title: const Padding(
+          padding: EdgeInsets.only(right: 5, top: 20, left: 20),
           child: Text(
             "Monitoring",
             style: TextStyle(color: Colors.black, fontSize: 17),
@@ -115,7 +115,7 @@ class _monitoringPageState extends State<monitoringPage> {
                     shape: BoxShape.circle,
                     color: Colors.white,
                     border: Border.all(color: Colors.grey.shade300)),
-                child: Icon(
+                child: const Icon(
                   Icons.arrow_back_ios_new_outlined,
                   color: Colors.black,
                   size: 20,
@@ -151,7 +151,7 @@ class _monitoringPageState extends State<monitoringPage> {
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                Text(
+                const Text(
                   "Alerts",
                   style: TextStyle(fontSize: 15),
                 ),
@@ -161,7 +161,7 @@ class _monitoringPageState extends State<monitoringPage> {
                       child: Switch(
                         onChanged: toggleSwitch,
                         value: isSwitched,
-                        activeColor: Color(0xff00AFB9),
+                        activeColor: const Color(0xff00AFB9),
                         activeTrackColor: Colors.grey.shade300,
                         inactiveThumbColor: Colors.black,
                         inactiveTrackColor: Colors.grey.shade300,
@@ -171,7 +171,7 @@ class _monitoringPageState extends State<monitoringPage> {
             ),
             IntrinsicHeight(
               child: Row(
-                children: [
+                children: const [
                   VerticalDivider(
                     color: Colors.red,
                     thickness: 4,
@@ -183,12 +183,12 @@ class _monitoringPageState extends State<monitoringPage> {
                 ],
               ),
             ),
-            SizedBox(
+            const SizedBox(
               height: 15,
             ),
             IntrinsicHeight(
               child: Row(
-                children: [
+                children: const [
                   VerticalDivider(
                     color: Colors.red,
                     thickness: 4,
@@ -200,12 +200,12 @@ class _monitoringPageState extends State<monitoringPage> {
                 ],
               ),
             ),
-            SizedBox(
+            const SizedBox(
               height: 15,
             ),
             IntrinsicHeight(
               child: Row(
-                children: [
+                children: const [
                   VerticalDivider(
                     color: Colors.red,
                     thickness: 4,
@@ -217,12 +217,12 @@ class _monitoringPageState extends State<monitoringPage> {
                 ],
               ),
             ),
-            SizedBox(
+            const SizedBox(
               height: 15,
             ),
             IntrinsicHeight(
               child: Row(
-                children: [
+                children: const [
                   VerticalDivider(
                     color: Colors.red,
                     thickness: 4,
@@ -234,12 +234,12 @@ class _monitoringPageState extends State<monitoringPage> {
                 ],
               ),
             ),
-            SizedBox(
+            const SizedBox(
               height: 15,
             ),
             IntrinsicHeight(
               child: Row(
-                children: [
+                children: const [
                   VerticalDivider(
                     color: Colors.red,
                     thickness: 4,
@@ -251,13 +251,13 @@ class _monitoringPageState extends State<monitoringPage> {
                 ],
               ),
             ),
-            SizedBox(
+            const SizedBox(
               height: 25,
             ),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                Text(
+                const Text(
                   "Card Transactions",
                   style: TextStyle(fontSize: 15),
                 ),
@@ -267,7 +267,7 @@ class _monitoringPageState extends State<monitoringPage> {
                       child: Switch(
                         onChanged: toggleSwitch1,
                         value: isSwitched1,
-                        activeColor: Color(0xff00AFB9),
+                        activeColor: const Color(0xff00AFB9),
                         activeTrackColor: Colors.grey.shade300,
                         inactiveThumbColor: Colors.black,
                         inactiveTrackColor: Colors.grey.shade300,
@@ -278,7 +278,7 @@ class _monitoringPageState extends State<monitoringPage> {
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                Text(
+                const Text(
                   "Suspicious Login",
                   style: TextStyle(fontSize: 15),
                 ),
@@ -288,7 +288,7 @@ class _monitoringPageState extends State<monitoringPage> {
                       child: Switch(
                         onChanged: toggleSwitch2,
                         value: isSwitched2,
-                        activeColor: Color(0xff00AFB9),
+                        activeColor: const Color(0xff00AFB9),
                         activeTrackColor: Colors.grey.shade300,
                         inactiveThumbColor: Colors.black,
                         inactiveTrackColor: Colors.grey.shade300,
@@ -299,7 +299,7 @@ class _monitoringPageState extends State<monitoringPage> {
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                Text(
+                const Text(
                   "Notifications",
                   style: TextStyle(fontSize: 15),
                 ),
@@ -309,7 +309,7 @@ class _monitoringPageState extends State<monitoringPage> {
                       child: Switch(
                         onChanged: toggleSwitch3,
                         value: isSwitched3,
-                        activeColor: Color(0xff00AFB9),
+                        activeColor: const Color(0xff00AFB9),
                         activeTrackColor: Colors.grey.shade300,
                         inactiveThumbColor: Colors.black,
                         inactiveTrackColor: Colors.grey.shade300,
@@ -320,7 +320,7 @@ class _monitoringPageState extends State<monitoringPage> {
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                Text(
+                const Text(
                   "Location",
                   style: TextStyle(fontSize: 15),
                 ),
@@ -330,7 +330,7 @@ class _monitoringPageState extends State<monitoringPage> {
                       child: Switch(
                         onChanged: toggleSwitch4,
                         value: isSwitched4,
-                        activeColor: Color(0xff00AFB9),
+                        activeColor: const Color(0xff00AFB9),
                         activeTrackColor: Colors.grey.shade300,
                         inactiveThumbColor: Colors.black,
                         inactiveTrackColor: Colors.grey.shade300,
@@ -341,7 +341,7 @@ class _monitoringPageState extends State<monitoringPage> {
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                Text(
+                const Text(
                   "Third Party Autheticator",
                   style: TextStyle(fontSize: 15),
                 ),
@@ -351,7 +351,7 @@ class _monitoringPageState extends State<monitoringPage> {
                       child: Switch(
                         onChanged: toggleSwitch5,
                         value: isSwitched5,
-                        activeColor: Color(0xff00AFB9),
+                        activeColor: const Color(0xff00AFB9),
                         activeTrackColor: Colors.grey.shade300,
                         inactiveThumbColor: Colors.black,
                         inactiveTrackColor: Colors.grey.shade300,

@@ -16,7 +16,7 @@ class _signuppageState extends State<signuppage> {
   Widget build(BuildContext context) {
     return Scaffold(
         // appBar: AppBar(),
-        body: ListView(padding: EdgeInsets.all(20), children: <Widget>[
+        body: ListView(padding: const EdgeInsets.all(20), children: <Widget>[
       Padding(
         padding: const EdgeInsets.only(top: 40, left: 20, right: 20),
         child: Column(
@@ -39,25 +39,25 @@ class _signuppageState extends State<signuppage> {
                           shape: BoxShape.circle,
                           color: Colors.white,
                           border: Border.all(color: Colors.grey.shade300)),
-                      child: Icon(
+                      child: const Icon(
                         Icons.arrow_back_ios_sharp,
                         size: 17,
                       )),
                 ),
-                SizedBox(
+                const SizedBox(
                   width: 60,
                 ),
-                Text("Register",
+                const Text("Register",
                     style:
                         TextStyle(fontWeight: FontWeight.bold, fontSize: 20)),
               ],
             ),
-            SizedBox(
+            const SizedBox(
               height: 30,
             ),
             Column(
               crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
+              children: const [
                 Text("Create Account",
                     style:
                         TextStyle(fontWeight: FontWeight.bold, fontSize: 20)),
@@ -70,16 +70,16 @@ class _signuppageState extends State<signuppage> {
                 ),
               ],
             ),
-            SizedBox(
+            const SizedBox(
               height: 50,
             ),
             Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Text(
+                const Text(
                   "Full Name",
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 15,
                 ),
                 Container(
@@ -87,7 +87,8 @@ class _signuppageState extends State<signuppage> {
                   decoration: BoxDecoration(
                       border: Border.all(color: Colors.grey.shade300),
                       color: Colors.grey.shade300,
-                      borderRadius: BorderRadius.all(Radius.circular(20))),
+                      borderRadius:
+                          const BorderRadius.all(Radius.circular(20))),
                   alignment: Alignment.center,
                   child: TextFormField(
                     // controller:
@@ -98,8 +99,8 @@ class _signuppageState extends State<signuppage> {
                       }
                       return null;
                     },
-                    style: TextStyle(color: Colors.black),
-                    decoration: InputDecoration(
+                    style: const TextStyle(color: Colors.black),
+                    decoration: const InputDecoration(
                       filled: true,
                       fillColor: Colors.white70,
                       hintText: 'Enter your Name',
@@ -113,11 +114,11 @@ class _signuppageState extends State<signuppage> {
                     },
                   ),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 15,
                 ),
-                Text("Email Address"),
-                SizedBox(
+                const Text("Email Address"),
+                const SizedBox(
                   height: 15,
                 ),
                 Container(
@@ -125,7 +126,8 @@ class _signuppageState extends State<signuppage> {
                   decoration: BoxDecoration(
                       border: Border.all(color: Colors.grey.shade300),
                       color: Colors.grey.shade300,
-                      borderRadius: BorderRadius.all(Radius.circular(20))),
+                      borderRadius:
+                          const BorderRadius.all(Radius.circular(20))),
                   alignment: Alignment.center,
                   child: TextFormField(
                     // controller:
@@ -136,8 +138,8 @@ class _signuppageState extends State<signuppage> {
                       }
                       return null;
                     },
-                    style: TextStyle(color: Colors.black),
-                    decoration: InputDecoration(
+                    style: const TextStyle(color: Colors.black),
+                    decoration: const InputDecoration(
                       filled: true,
                       fillColor: Colors.white70,
                       hintText: 'Enter your Email Address',
@@ -151,11 +153,11 @@ class _signuppageState extends State<signuppage> {
                     },
                   ),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 15,
                 ),
-                Text("Password"),
-                SizedBox(
+                const Text("Password"),
+                const SizedBox(
                   height: 15,
                 ),
                 Container(
@@ -163,7 +165,8 @@ class _signuppageState extends State<signuppage> {
                   decoration: BoxDecoration(
                       border: Border.all(color: Colors.grey.shade300),
                       color: Colors.grey.shade300,
-                      borderRadius: BorderRadius.all(Radius.circular(20))),
+                      borderRadius:
+                          const BorderRadius.all(Radius.circular(20))),
                   alignment: Alignment.center,
                   child: TextFormField(
                     // controller:
@@ -176,7 +179,7 @@ class _signuppageState extends State<signuppage> {
                       }
                       return null;
                     },
-                    style: TextStyle(color: Colors.black),
+                    style: const TextStyle(color: Colors.black),
                     decoration: InputDecoration(
                       filled: true,
                       fillColor: Colors.white70,
@@ -194,8 +197,8 @@ class _signuppageState extends State<signuppage> {
                           color: Colors.black,
                         ),
                       ),
-                      hintStyle: TextStyle(fontSize: 11),
-                      border: OutlineInputBorder(
+                      hintStyle: const TextStyle(fontSize: 11),
+                      border: const OutlineInputBorder(
                           borderRadius: BorderRadius.all(Radius.circular(10)),
                           borderSide: BorderSide.none),
                     ),
@@ -204,7 +207,7 @@ class _signuppageState extends State<signuppage> {
                     },
                   ),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 50,
                 ),
                 InkWell(
@@ -240,14 +243,14 @@ class _signuppageState extends State<signuppage> {
                     child: Container(
                         // width: 200,
                         height: 45,
-                        decoration: BoxDecoration(
+                        decoration: const BoxDecoration(
                           color: Color(0xFF00AFB9),
                           borderRadius: BorderRadius.all(
                             Radius.circular(5),
                           ),
                         ),
                         alignment: Alignment.center,
-                        child: Text(
+                        child: const Text(
                           "Create an Anccount",
                           style: TextStyle(color: Colors.white),
                         )),
@@ -255,7 +258,7 @@ class _signuppageState extends State<signuppage> {
                 ),
               ],
             ),
-            SizedBox(
+            const SizedBox(
               height: 20,
             ),
             Row(
@@ -283,7 +286,7 @@ class _signuppageState extends State<signuppage> {
                 )
               ],
             ),
-            SizedBox(
+            const SizedBox(
               height: 20,
             ),
             Row(
@@ -296,12 +299,12 @@ class _signuppageState extends State<signuppage> {
                         shape: BoxShape.circle,
                         color: Colors.grey.shade200,
                         border: Border.all(color: Colors.grey.shade300)),
-                    child: Icon(
+                    child: const Icon(
                       Icons.facebook,
                       color: Colors.green,
                       size: 30,
                     )),
-                SizedBox(
+                const SizedBox(
                   width: 20,
                 ),
                 Container(
@@ -311,12 +314,12 @@ class _signuppageState extends State<signuppage> {
                         shape: BoxShape.circle,
                         color: Colors.grey.shade200,
                         border: Border.all(color: Colors.grey.shade300)),
-                    child: Icon(
+                    child: const Icon(
                       Icons.facebook,
                       color: Colors.black,
                       size: 30,
                     )),
-                SizedBox(
+                const SizedBox(
                   width: 20,
                 ),
                 Container(
@@ -326,19 +329,19 @@ class _signuppageState extends State<signuppage> {
                         shape: BoxShape.circle,
                         color: Colors.grey.shade200,
                         border: Border.all(color: Colors.grey.shade300)),
-                    child: Icon(
+                    child: const Icon(
                       Icons.facebook,
                       color: Colors.blue,
                       size: 30,
                     )),
               ],
             ),
-            SizedBox(
+            const SizedBox(
               height: 30,
             ),
             Center(
               child: Column(
-                children: [
+                children: const [
                   Text(
                     "By signing up you agree to our",
                     style: TextStyle(fontSize: 13, color: Colors.grey),

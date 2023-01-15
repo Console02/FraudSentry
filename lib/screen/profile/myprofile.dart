@@ -43,7 +43,8 @@ class _ProfilePageState extends State<ProfilePage> {
               height: 40,
               width: 40,
               decoration: BoxDecoration(
-                  image: DecorationImage(image: AssetImage("assets/profile_img/dir.png"))),
+                  image: DecorationImage(
+                      image: AssetImage("assets/profile_img/dir.png"))),
             ),
             SizedBox(
               width: 120,
@@ -72,7 +73,8 @@ class _ProfilePageState extends State<ProfilePage> {
             shape: BoxShape.circle,
             border: Border.all(color: ProfileColor.subColor, width: 2),
             color: ProfileColor.mainColor,
-            image: DecorationImage(image: AssetImage("assets/profile_img/avatar.png"))),
+            image: DecorationImage(
+                image: AssetImage("assets/profile_img/avatar.png"))),
       ),
       SizedBox(height: 15),
       Text(
@@ -94,13 +96,12 @@ class _ProfilePageState extends State<ProfilePage> {
     return Positioned(
         child: Container(
       width: MediaQuery.of(context).size.width - 30,
-      
       child: Container(
           child: Column(children: [
-            Text(
-              "Personal Info",
-              style: TextStyle(fontSize: 12, color: Colors.grey.withOpacity(0.8)),
-            ),
+        Text(
+          "Personal Info",
+          style: TextStyle(fontSize: 12, color: Colors.grey.withOpacity(0.8)),
+        ),
         InkWell(
           onTap: () {
             //  MainProfilePage()
@@ -152,9 +153,9 @@ class _ProfilePageState extends State<ProfilePage> {
         ),
         Divider(thickness: 2, color: Colors.grey.withOpacity(0.7)),
         Text(
-              "Security",
-              style: TextStyle(fontSize: 12, color: Colors.grey.withOpacity(0.8)),
-            ),
+          "Security",
+          style: TextStyle(fontSize: 12, color: Colors.grey.withOpacity(0.8)),
+        ),
         InkWell(
           onTap: () {
             //  Face Id()
@@ -178,24 +179,23 @@ class _ProfilePageState extends State<ProfilePage> {
                 SizedBox(
                   width: 50,
                 ),
-               Switch(
-            value: isSwitched,
-            onChanged: (value) {
-              setState(() {
-                isSwitched = value;
-              });
-            },
-            activeTrackColor: Colors.grey,
-            activeColor: ProfileColor.mainColor,
-          ),
-        
-        //        
+                Switch(
+                  value: isSwitched,
+                  onChanged: (value) {
+                    setState(() {
+                      isSwitched = value;
+                    });
+                  },
+                  activeTrackColor: Colors.grey,
+                  activeColor: ProfileColor.mainColor,
+                ),
+
+                //
               ],
             );
           },
         ),
         Divider(thickness: 2, color: Colors.grey.withOpacity(0.7)),
-
         InkWell(
           onTap: () {
             //  FingerPrint())
@@ -219,24 +219,24 @@ class _ProfilePageState extends State<ProfilePage> {
                 SizedBox(
                   width: 50,
                 ),
-               Switch(
-            value: isSwitched,
-            onChanged: (value) {
-              setState(() {
-                isSwitched = value;
-              });
-            },
-            activeTrackColor: Colors.grey,
-            activeColor: ProfileColor.mainColor,
-          ),
-        
-        //        
+                Switch(
+                  value: isSwitched,
+                  onChanged: (value) {
+                    setState(() {
+                      isSwitched = value;
+                    });
+                  },
+                  activeTrackColor: Colors.grey,
+                  activeColor: ProfileColor.mainColor,
+                ),
+
+                //
               ],
             );
           },
         ),
         Divider(thickness: 2, color: Colors.grey.withOpacity(0.7)),
-             InkWell(
+        InkWell(
           onTap: () {
             //  ChangePassword())
             Row(
@@ -247,7 +247,8 @@ class _ProfilePageState extends State<ProfilePage> {
                   margin: const EdgeInsets.only(top: 15, bottom: 15),
                   decoration: BoxDecoration(
                       image: DecorationImage(
-                          image: AssetImage("assets/profile_img/change_pass.png"))),
+                          image: AssetImage(
+                              "assets/profile_img/change_pass.png"))),
                 ),
                 SizedBox(
                   width: 20,
@@ -255,12 +256,12 @@ class _ProfilePageState extends State<ProfilePage> {
                 Text(
                   "Change Password",
                   style: TextStyle(fontSize: 16, color: ProfileColor.textColor),
-                ),  
+                ),
               ],
             );
           },
         ),
- InkWell(
+        InkWell(
           onTap: () {
             //  Forget Password()
             Row(
@@ -271,7 +272,8 @@ class _ProfilePageState extends State<ProfilePage> {
                   margin: const EdgeInsets.only(top: 15, bottom: 15),
                   decoration: BoxDecoration(
                       image: DecorationImage(
-                          image: AssetImage("assets/profile_img/forget_pass.png"))),
+                          image: AssetImage(
+                              "assets/profile_img/forget_pass.png"))),
                 ),
                 SizedBox(
                   width: 20,
@@ -279,17 +281,17 @@ class _ProfilePageState extends State<ProfilePage> {
                 Text(
                   "Forget Password",
                   style: TextStyle(fontSize: 16, color: ProfileColor.textColor),
-                ),  
+                ),
               ],
             );
           },
         ),
         Divider(thickness: 2, color: Colors.grey.withOpacity(0.7)),
         Text(
-              "General",
-              style: TextStyle(fontSize: 12, color: Colors.grey.withOpacity(0.8)),
-            ),
-InkWell(
+          "General",
+          style: TextStyle(fontSize: 12, color: Colors.grey.withOpacity(0.8)),
+        ),
+        InkWell(
           onTap: () {
             //  Notification()
             Row(
@@ -308,7 +310,7 @@ InkWell(
                 Text(
                   "Notification",
                   style: TextStyle(fontSize: 16, color: ProfileColor.textColor),
-                ),  
+                ),
               ],
             );
           },
@@ -333,13 +335,12 @@ InkWell(
                 Text(
                   "Languages",
                   style: TextStyle(fontSize: 16, color: ProfileColor.textColor),
-                ),  
+                ),
               ],
             );
           },
         ),
         Divider(thickness: 2, color: Colors.grey.withOpacity(0.7)),
-
         InkWell(
           onTap: () {
             //  Notification()
@@ -359,39 +360,32 @@ InkWell(
                 Text(
                   "Help and Support",
                   style: TextStyle(fontSize: 16, color: ProfileColor.textColor),
-                ),  
+                ),
               ],
             );
           },
         ),
         Divider(thickness: 2, color: Colors.grey.withOpacity(0.7))
-        
       ])),
     ));
-  },
+  }
 
-_bottomBtn(){
-  return Positioned(
+  _bottomBtn() {
+    return Positioned(
       child: Container(
-      child: InkWell(
-        onTap:(){
+          child: InkWell(
+        onTap: () {
           //logout()
         },
         child: Container(
-          // width: 200,
-          height: 45,
-
-          alignment: Alignment.center,
-          child: Text(
-            "Log Out",
-            style: TextStyle(color: ProfileColor.auxColor),
-          )),
-
-      )
-    
-    ),
-    
-  );
-
-}
+            // width: 200,
+            height: 45,
+            alignment: Alignment.center,
+            child: Text(
+              "Log Out",
+              style: TextStyle(color: ProfileColor.auxColor),
+            )),
+      )),
+    );
+  }
 }

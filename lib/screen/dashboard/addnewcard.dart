@@ -13,8 +13,8 @@ class _addmycardState extends State<addmycard> {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.white,
-        title: Padding(
-          padding: const EdgeInsets.only(right: 5, top: 20, left: 20),
+        title: const Padding(
+          padding: EdgeInsets.only(right: 5, top: 20, left: 20),
           child: Text(
             "Add New Card",
             style: TextStyle(color: Colors.black, fontSize: 17),
@@ -33,7 +33,7 @@ class _addmycardState extends State<addmycard> {
                     shape: BoxShape.circle,
                     color: Colors.white,
                     border: Border.all(color: Colors.grey.shade300)),
-                child: Icon(
+                child: const Icon(
                   Icons.arrow_back_ios_new_outlined,
                   color: Colors.black,
                   size: 20,
@@ -54,7 +54,7 @@ class _addmycardState extends State<addmycard> {
                     shape: BoxShape.circle,
                     color: Colors.white,
                     border: Border.all(color: Colors.grey.shade300)),
-                child: Icon(
+                child: const Icon(
                   Icons.more_horiz,
                   color: Colors.black,
                   size: 20,
@@ -71,36 +71,36 @@ class _addmycardState extends State<addmycard> {
                 child: Container(
                     width: 300,
                     padding: const EdgeInsets.all(20.0),
-                    decoration: BoxDecoration(
+                    decoration: const BoxDecoration(
                       borderRadius: BorderRadius.all(Radius.circular(15)),
                       color: Color(0xFF00AFB9),
                     ),
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        Text(
+                        const Text(
                           "MASTERCARD",
                           style: TextStyle(
                               color: Colors.white,
                               fontSize: 14,
                               fontWeight: FontWeight.bold),
                         ),
-                        SizedBox(
+                        const SizedBox(
                           height: 20,
                         ),
-                        Text(
+                        const Text(
                           "Account Number",
                           style: TextStyle(color: Colors.white, fontSize: 13),
                         ),
-                        SizedBox(
+                        const SizedBox(
                           height: 10,
                         ),
-                        Text(
+                        const Text(
                           "0234 4561 7894 1230",
                           style: TextStyle(
                               color: Colors.white, fontWeight: FontWeight.bold),
                         ),
-                        SizedBox(
+                        const SizedBox(
                           height: 20,
                         ),
                         Row(
@@ -108,7 +108,7 @@ class _addmycardState extends State<addmycard> {
                           children: [
                             Column(
                               crossAxisAlignment: CrossAxisAlignment.start,
-                              children: [
+                              children: const [
                                 Text(
                                   "Acoount Holder",
                                   style: TextStyle(
@@ -124,7 +124,7 @@ class _addmycardState extends State<addmycard> {
                               ],
                             ),
                             Column(
-                              children: [
+                              children: const [
                                 Text(
                                   "Valid Till",
                                   style: TextStyle(
@@ -147,15 +147,15 @@ class _addmycardState extends State<addmycard> {
                       ],
                     )),
               ),
-              Text("Enter the details to add a new card"),
+              const Text("Enter the details to add a new card"),
               Padding(
                 padding: const EdgeInsets.all(20.0),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Text("Card Number",
+                    const Text("Card Number",
                         style: TextStyle(fontWeight: FontWeight.bold)),
-                    SizedBox(
+                    const SizedBox(
                       height: 10,
                     ),
                     Container(
@@ -163,7 +163,8 @@ class _addmycardState extends State<addmycard> {
                       decoration: BoxDecoration(
                           border: Border.all(color: Colors.grey.shade200),
                           color: Colors.grey.shade200,
-                          borderRadius: BorderRadius.all(Radius.circular(20))),
+                          borderRadius:
+                              const BorderRadius.all(Radius.circular(20))),
                       alignment: Alignment.center,
                       child: TextFormField(
                         // controller:
@@ -175,7 +176,7 @@ class _addmycardState extends State<addmycard> {
                           }
                           return null;
                         },
-                        style: TextStyle(color: Colors.black),
+                        style: const TextStyle(color: Colors.black),
                         decoration: InputDecoration(
                           filled: true,
                           fillColor: Colors.white70,
@@ -188,8 +189,8 @@ class _addmycardState extends State<addmycard> {
                               height: 30,
                             ),
                           ),
-                          hintStyle: TextStyle(fontSize: 11),
-                          border: OutlineInputBorder(
+                          hintStyle: const TextStyle(fontSize: 11),
+                          border: const OutlineInputBorder(
                               borderRadius:
                                   BorderRadius.all(Radius.circular(10)),
                               borderSide: BorderSide.none),
@@ -199,12 +200,12 @@ class _addmycardState extends State<addmycard> {
                         },
                       ),
                     ),
-                    SizedBox(
+                    const SizedBox(
                       height: 15,
                     ),
-                    Text("Card Holder",
+                    const Text("Card Holder",
                         style: TextStyle(fontWeight: FontWeight.bold)),
-                    SizedBox(
+                    const SizedBox(
                       height: 10,
                     ),
                     Container(
@@ -212,7 +213,8 @@ class _addmycardState extends State<addmycard> {
                       decoration: BoxDecoration(
                           border: Border.all(color: Colors.grey.shade200),
                           color: Colors.grey.shade200,
-                          borderRadius: BorderRadius.all(Radius.circular(20))),
+                          borderRadius:
+                              const BorderRadius.all(Radius.circular(20))),
                       alignment: Alignment.center,
                       child: TextFormField(
                         // controller:
@@ -224,8 +226,8 @@ class _addmycardState extends State<addmycard> {
                           }
                           return null;
                         },
-                        style: TextStyle(color: Colors.black),
-                        decoration: InputDecoration(
+                        style: const TextStyle(color: Colors.black),
+                        decoration: const InputDecoration(
                           filled: true,
                           fillColor: Colors.white70,
                           hintText: 'Enter card holder name',
@@ -254,11 +256,11 @@ class _addmycardState extends State<addmycard> {
                         Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
-                            Text(
+                            const Text(
                               "EXP",
                               style: TextStyle(fontWeight: FontWeight.bold),
                             ),
-                            SizedBox(
+                            const SizedBox(
                               height: 10,
                             ),
                             Container(
@@ -268,8 +270,8 @@ class _addmycardState extends State<addmycard> {
                                   border:
                                       Border.all(color: Colors.grey.shade200),
                                   color: Colors.grey.shade200,
-                                  borderRadius:
-                                      BorderRadius.all(Radius.circular(20))),
+                                  borderRadius: const BorderRadius.all(
+                                      Radius.circular(20))),
                               alignment: Alignment.center,
                               child: TextFormField(
                                 // controller:
@@ -281,8 +283,8 @@ class _addmycardState extends State<addmycard> {
                                   }
                                   return null;
                                 },
-                                style: TextStyle(color: Colors.black),
-                                decoration: InputDecoration(
+                                style: const TextStyle(color: Colors.black),
+                                decoration: const InputDecoration(
                                   filled: true,
                                   fillColor: Colors.white70,
                                   hintText: 'MM/YYYY',
@@ -302,11 +304,11 @@ class _addmycardState extends State<addmycard> {
                         Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
-                            Text(
+                            const Text(
                               "CVV",
                               style: TextStyle(fontWeight: FontWeight.bold),
                             ),
-                            SizedBox(
+                            const SizedBox(
                               height: 10,
                             ),
                             Container(
@@ -316,8 +318,8 @@ class _addmycardState extends State<addmycard> {
                                   border:
                                       Border.all(color: Colors.grey.shade200),
                                   color: Colors.grey.shade200,
-                                  borderRadius:
-                                      BorderRadius.all(Radius.circular(20))),
+                                  borderRadius: const BorderRadius.all(
+                                      Radius.circular(20))),
                               alignment: Alignment.center,
                               child: TextFormField(
                                 // controller:
@@ -329,8 +331,8 @@ class _addmycardState extends State<addmycard> {
                                   }
                                   return null;
                                 },
-                                style: TextStyle(color: Colors.black),
-                                decoration: InputDecoration(
+                                style: const TextStyle(color: Colors.black),
+                                decoration: const InputDecoration(
                                   filled: true,
                                   fillColor: Colors.white70,
                                   hintText: '000',
@@ -357,15 +359,15 @@ class _addmycardState extends State<addmycard> {
                   margin: const EdgeInsets.only(left: 20, right: 20, top: 20),
                   padding: const EdgeInsets.only(left: 90, top: 15, bottom: 15),
                   decoration: BoxDecoration(
-                    border: Border.all(color: Color(0xFF00AFB9)),
+                    border: Border.all(color: const Color(0xFF00AFB9)),
                     // color: Color(0xFF#3A3939),
-                    borderRadius: BorderRadius.all(
+                    borderRadius: const BorderRadius.all(
                       Radius.circular(15),
                     ),
                   ),
                   alignment: Alignment.center,
                   child: Row(
-                    children: [
+                    children: const [
                       Text(
                         "Add Card",
                         style: TextStyle(color: Color(0xFF00AFB9)),

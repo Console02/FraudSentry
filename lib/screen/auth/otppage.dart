@@ -46,20 +46,20 @@ class _otppageState extends State<otppage> {
                             textAlign: TextAlign.center,
                           ),
                         ),
-                        SizedBox(
+                        const SizedBox(
                           height: 20,
                         ),
                         Container(
                             width: 200,
                             height: 45,
-                            decoration: BoxDecoration(
+                            decoration: const BoxDecoration(
                               color: Color(0xFF00AFB9),
                               borderRadius: BorderRadius.all(
                                 Radius.circular(5),
                               ),
                             ),
                             alignment: Alignment.center,
-                            child: Text(
+                            child: const Text(
                               "Agree and continue",
                               style: TextStyle(color: Colors.white),
                             )),
@@ -97,7 +97,7 @@ class _otppageState extends State<otppage> {
 
     return Scaffold(
         // appBar: AppBar(),
-        body: ListView(padding: EdgeInsets.all(20), children: <Widget>[
+        body: ListView(padding: const EdgeInsets.all(20), children: <Widget>[
       Padding(
         padding: const EdgeInsets.only(top: 40, left: 20, right: 20),
         child: Center(
@@ -106,7 +106,7 @@ class _otppageState extends State<otppage> {
             children: [
               Column(
                 crossAxisAlignment: CrossAxisAlignment.center,
-                children: [
+                children: const [
                   Text("Enter OTP",
                       style:
                           TextStyle(fontWeight: FontWeight.bold, fontSize: 20)),
@@ -117,7 +117,7 @@ class _otppageState extends State<otppage> {
               ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
-                children: [
+                children: const [
                   SizedBox(
                     width: 260,
                     child: Text(
@@ -127,7 +127,7 @@ class _otppageState extends State<otppage> {
                   ),
                 ],
               ),
-              SizedBox(
+              const SizedBox(
                 height: 50,
               ),
               OTPTextField(
@@ -138,14 +138,14 @@ class _otppageState extends State<otppage> {
                   fieldWidth: 45,
                   fieldStyle: FieldStyle.box,
                   outlineBorderRadius: 15,
-                  style: TextStyle(fontSize: 17),
+                  style: const TextStyle(fontSize: 17),
                   onChanged: (pin) {
                     print("Changed: " + pin);
                   },
                   onCompleted: (pin) {
                     print("Completed: " + pin);
                   }),
-              SizedBox(
+              const SizedBox(
                 height: 50,
               ),
               Column(
@@ -158,27 +158,27 @@ class _otppageState extends State<otppage> {
                     child: Container(
                         // width: 200,
                         height: 45,
-                        decoration: BoxDecoration(
+                        decoration: const BoxDecoration(
                           color: Color(0xFF00AFB9),
                           borderRadius: BorderRadius.all(
                             Radius.circular(5),
                           ),
                         ),
                         alignment: Alignment.center,
-                        child: Text(
+                        child: const Text(
                           "Continue",
                           style: TextStyle(color: Colors.white),
                         )),
                   ),
                 ],
               ),
-              SizedBox(
+              const SizedBox(
                 height: 15,
               ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  Text(
+                  const Text(
                     "Didn’t receive code?",
                     style: TextStyle(fontSize: 14, color: Colors.grey),
                   ),
@@ -190,7 +190,7 @@ class _otppageState extends State<otppage> {
                       //       builder: (context) => const signuppage()),
                       // );
                     },
-                    child: Text(
+                    child: const Text(
                       "Resend Code",
                       style: TextStyle(fontSize: 14, color: Color(0xFF8E8E8E)),
                     ),

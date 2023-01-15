@@ -19,7 +19,7 @@ class _signinpageState extends State<signinpage> {
   Widget build(BuildContext context) {
     return Scaffold(
         // appBar: AppBar(),
-        body: ListView(padding: EdgeInsets.all(20), children: <Widget>[
+        body: ListView(padding: const EdgeInsets.all(20), children: <Widget>[
       Padding(
         padding: const EdgeInsets.only(top: 40, left: 20, right: 20),
         child: Column(
@@ -42,27 +42,27 @@ class _signinpageState extends State<signinpage> {
                           shape: BoxShape.circle,
                           color: Colors.white,
                           border: Border.all(color: Colors.grey.shade300)),
-                      child: Icon(
+                      child: const Icon(
                         Icons.arrow_back_ios_sharp,
                         size: 17,
                       )),
                 ),
-                SizedBox(
+                const SizedBox(
                   width: 60,
                 ),
-                Text("Sign In",
+                const Text("Sign In",
                     style:
                         TextStyle(fontWeight: FontWeight.bold, fontSize: 20)),
               ],
             ),
-            SizedBox(
+            const SizedBox(
               height: 30,
             ),
             Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Row(
-                  children: [
+                  children: const [
                     Text("Hi,Welcome Back!",
                         style: TextStyle(
                             fontWeight: FontWeight.bold, fontSize: 20)),
@@ -76,23 +76,23 @@ class _signinpageState extends State<signinpage> {
                     ),
                   ],
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 10,
                 ),
-                Text(
+                const Text(
                   "Lorem ipsum dolor sit amet, consectetur",
                   style: TextStyle(color: Colors.grey),
                 ),
               ],
             ),
-            SizedBox(
+            const SizedBox(
               height: 50,
             ),
             Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Text("Email Address"),
-                SizedBox(
+                const Text("Email Address"),
+                const SizedBox(
                   height: 15,
                 ),
                 Container(
@@ -100,7 +100,8 @@ class _signinpageState extends State<signinpage> {
                   decoration: BoxDecoration(
                       border: Border.all(color: Colors.grey.shade300),
                       color: Colors.grey.shade300,
-                      borderRadius: BorderRadius.all(Radius.circular(20))),
+                      borderRadius:
+                          const BorderRadius.all(Radius.circular(20))),
                   alignment: Alignment.center,
                   child: TextFormField(
                     // controller:
@@ -111,8 +112,8 @@ class _signinpageState extends State<signinpage> {
                       }
                       return null;
                     },
-                    style: TextStyle(color: Colors.black),
-                    decoration: InputDecoration(
+                    style: const TextStyle(color: Colors.black),
+                    decoration: const InputDecoration(
                       filled: true,
                       fillColor: Colors.white70,
                       hintText: 'Enter your Email Address',
@@ -126,11 +127,11 @@ class _signinpageState extends State<signinpage> {
                     },
                   ),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 15,
                 ),
-                Text("Password"),
-                SizedBox(
+                const Text("Password"),
+                const SizedBox(
                   height: 15,
                 ),
                 Container(
@@ -138,7 +139,8 @@ class _signinpageState extends State<signinpage> {
                   decoration: BoxDecoration(
                       border: Border.all(color: Colors.grey.shade300),
                       color: Colors.grey.shade300,
-                      borderRadius: BorderRadius.all(Radius.circular(20))),
+                      borderRadius:
+                          const BorderRadius.all(Radius.circular(20))),
                   alignment: Alignment.center,
                   child: TextFormField(
                     // controller:
@@ -151,7 +153,7 @@ class _signinpageState extends State<signinpage> {
                       }
                       return null;
                     },
-                    style: TextStyle(color: Colors.black),
+                    style: const TextStyle(color: Colors.black),
                     decoration: InputDecoration(
                       filled: true,
                       fillColor: Colors.white70,
@@ -169,8 +171,8 @@ class _signinpageState extends State<signinpage> {
                           color: Colors.black,
                         ),
                       ),
-                      hintStyle: TextStyle(fontSize: 11),
-                      border: OutlineInputBorder(
+                      hintStyle: const TextStyle(fontSize: 11),
+                      border: const OutlineInputBorder(
                           borderRadius: BorderRadius.all(Radius.circular(10)),
                           borderSide: BorderSide.none),
                     ),
@@ -179,7 +181,7 @@ class _signinpageState extends State<signinpage> {
                     },
                   ),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 20,
                 ),
                 Row(
@@ -195,10 +197,10 @@ class _signinpageState extends State<signinpage> {
                             });
                           },
                         ),
-                        SizedBox(
+                        const SizedBox(
                           width: 10,
                         ),
-                        Text(
+                        const Text(
                           "Remember Me",
                           style: TextStyle(fontSize: 12),
                         ),
@@ -212,11 +214,11 @@ class _signinpageState extends State<signinpage> {
                                 builder: (context) => const forgetPaasword()),
                           );
                         },
-                        child: Text("Forgot Password",
+                        child: const Text("Forgot Password",
                             style: TextStyle(fontSize: 12))),
                   ],
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 50,
                 ),
                 InkWell(
@@ -252,14 +254,14 @@ class _signinpageState extends State<signinpage> {
                     child: Container(
                         // width: 200,
                         height: 45,
-                        decoration: BoxDecoration(
+                        decoration: const BoxDecoration(
                           color: Color(0xFF00AFB9),
                           borderRadius: BorderRadius.all(
                             Radius.circular(5),
                           ),
                         ),
                         alignment: Alignment.center,
-                        child: Text(
+                        child: const Text(
                           "Sign In",
                           style: TextStyle(color: Colors.white),
                         )),
@@ -267,13 +269,13 @@ class _signinpageState extends State<signinpage> {
                 ),
               ],
             ),
-            SizedBox(
+            const SizedBox(
               height: 15,
             ),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Text(
+                const Text(
                   "Don’t have an account?",
                   style: TextStyle(fontSize: 13, color: Colors.grey),
                 ),
@@ -285,14 +287,14 @@ class _signinpageState extends State<signinpage> {
                           builder: (context) => const signuppage()),
                     );
                   },
-                  child: Text(
+                  child: const Text(
                     "Sign up",
                     style: TextStyle(fontSize: 13, color: Color(0xFF8E8E8E)),
                   ),
                 ),
               ],
             ),
-            SizedBox(
+            const SizedBox(
               height: 30,
             ),
             Row(
@@ -320,7 +322,7 @@ class _signinpageState extends State<signinpage> {
                 )
               ],
             ),
-            SizedBox(
+            const SizedBox(
               height: 10,
             ),
             Row(
@@ -333,12 +335,12 @@ class _signinpageState extends State<signinpage> {
                         shape: BoxShape.circle,
                         color: Colors.grey.shade200,
                         border: Border.all(color: Colors.grey.shade300)),
-                    child: Icon(
+                    child: const Icon(
                       Icons.facebook,
                       color: Colors.green,
                       size: 30,
                     )),
-                SizedBox(
+                const SizedBox(
                   width: 20,
                 ),
                 Container(
@@ -348,12 +350,12 @@ class _signinpageState extends State<signinpage> {
                         shape: BoxShape.circle,
                         color: Colors.grey.shade200,
                         border: Border.all(color: Colors.grey.shade300)),
-                    child: Icon(
+                    child: const Icon(
                       Icons.facebook,
                       color: Colors.black,
                       size: 30,
                     )),
-                SizedBox(
+                const SizedBox(
                   width: 20,
                 ),
                 Container(
@@ -363,14 +365,14 @@ class _signinpageState extends State<signinpage> {
                         shape: BoxShape.circle,
                         color: Colors.grey.shade200,
                         border: Border.all(color: Colors.grey.shade300)),
-                    child: Icon(
+                    child: const Icon(
                       Icons.facebook,
                       color: Colors.blue,
                       size: 30,
                     )),
               ],
             ),
-            SizedBox(
+            const SizedBox(
               height: 30,
             ),
           ],

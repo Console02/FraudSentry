@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:fraudsentry/screen/auth/onboarding/onboarding1.dart';
+import 'package:fraudsentry/screen/auth/onboarding/splashscreen.dart';
 import 'package:fraudsentry/screen/auth/signin.dart';
 import 'package:fraudsentry/screen/auth/signup.dart';
 
@@ -16,8 +18,10 @@ class MyApp extends StatelessWidget {
         theme: ThemeData(
           primarySwatch: Colors.blue,
         ),
-        home:
-            // signuppage()
-            signinpage());
+        home: onboardingpage1()
+        // splashpage()
+        // signuppage()
+        // signinpage()
+        );
   }
 }

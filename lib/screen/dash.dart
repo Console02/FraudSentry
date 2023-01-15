@@ -6,6 +6,7 @@ import 'package:fraudsentry/screen/dashboard/addnewcard.dart';
 import 'package:fraudsentry/screen/dashboard/home.dart';
 // import 'package:fraudsentry/screen/dashboard/home.dart';
 import 'package:fraudsentry/screen/dashboard/mycard.dart';
+import 'package:fraudsentry/screen/dashboard/profile/user_profile.dart';
 import 'package:fraudsentry/screen/dashboard/statics.dart';
 import 'package:syncfusion_flutter_charts/charts.dart';
 import 'package:syncfusion_flutter_charts/sparkcharts.dart';
@@ -57,19 +58,19 @@ class _mainDashboardState extends State<mainDashboard> {
     _SalesData('May', 40)
   ];
   Widget homenavigationWidget() {
-    return homepage();
+    return const homepage();
   }
 
   Widget statisticnavigationWidget() {
-    return staticspage();
+    return const staticspage();
   }
 
   Widget mycardnavigationWidget() {
-    return mycardinfo();
+    return const mycardinfo();
   }
 
   Widget addaccountnavigationWidget() {
-    return addaccount();
+    return const addaccount();
   }
 
   @override
@@ -79,8 +80,8 @@ class _mainDashboardState extends State<mainDashboard> {
       appBar: itempage == "Statistics"
           ? AppBar(
               backgroundColor: Colors.white,
-              title: Padding(
-                padding: const EdgeInsets.only(right: 5, top: 20, left: 20),
+              title: const Padding(
+                padding: EdgeInsets.only(right: 5, top: 20, left: 20),
                 child: Text(
                   "General Statistics",
                   style: TextStyle(color: Colors.black, fontSize: 17),
@@ -101,7 +102,7 @@ class _mainDashboardState extends State<mainDashboard> {
                           shape: BoxShape.circle,
                           color: Colors.white,
                           border: Border.all(color: Colors.grey.shade300)),
-                      child: Icon(
+                      child: const Icon(
                         Icons.arrow_back_ios_new_outlined,
                         color: Colors.black,
                         size: 20,
@@ -113,8 +114,8 @@ class _mainDashboardState extends State<mainDashboard> {
           : itempage == "My card"
               ? AppBar(
                   backgroundColor: Colors.white,
-                  title: Padding(
-                    padding: const EdgeInsets.only(right: 5, top: 20, left: 20),
+                  title: const Padding(
+                    padding: EdgeInsets.only(right: 5, top: 20, left: 20),
                     child: Text(
                       "All Cards",
                       style: TextStyle(color: Colors.black, fontSize: 17),
@@ -136,7 +137,7 @@ class _mainDashboardState extends State<mainDashboard> {
                               shape: BoxShape.circle,
                               color: Colors.white,
                               border: Border.all(color: Colors.grey.shade300)),
-                          child: Icon(
+                          child: const Icon(
                             Icons.arrow_back_ios_new_outlined,
                             color: Colors.black,
                             size: 20,
@@ -157,7 +158,7 @@ class _mainDashboardState extends State<mainDashboard> {
                               shape: BoxShape.circle,
                               color: Colors.white,
                               border: Border.all(color: Colors.grey.shade300)),
-                          child: Icon(
+                          child: const Icon(
                             Icons.more_horiz,
                             color: Colors.black,
                             size: 20,
@@ -168,9 +169,8 @@ class _mainDashboardState extends State<mainDashboard> {
               : itempage == "fbutton"
                   ? AppBar(
                       backgroundColor: Colors.white,
-                      title: Padding(
-                        padding:
-                            const EdgeInsets.only(right: 5, top: 20, left: 20),
+                      title: const Padding(
+                        padding: EdgeInsets.only(right: 5, top: 20, left: 20),
                         child: Text(
                           "Add Account",
                           style: TextStyle(color: Colors.black, fontSize: 17),
@@ -193,7 +193,7 @@ class _mainDashboardState extends State<mainDashboard> {
                                   color: Colors.white,
                                   border:
                                       Border.all(color: Colors.grey.shade300)),
-                              child: Icon(
+                              child: const Icon(
                                 Icons.arrow_back_ios_new_outlined,
                                 color: Colors.black,
                                 size: 20,
@@ -215,7 +215,7 @@ class _mainDashboardState extends State<mainDashboard> {
                                   color: Colors.white,
                                   border:
                                       Border.all(color: Colors.grey.shade300)),
-                              child: Icon(
+                              child: const Icon(
                                 Icons.more_horiz,
                                 color: Colors.black,
                                 size: 20,
@@ -223,65 +223,69 @@ class _mainDashboardState extends State<mainDashboard> {
                         )
                       ],
                     )
-                  : AppBar(
-                      backgroundColor: Colors.white,
-                      title: Padding(
-                        padding: const EdgeInsets.only(top: 20),
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Text(
-                              "Welcome back",
-                              style:
-                                  TextStyle(color: Colors.grey, fontSize: 10),
+                  : itempage == "Dashboard"
+                      ? AppBar(
+                          backgroundColor: Colors.white,
+                          title: Padding(
+                            padding: const EdgeInsets.only(top: 20),
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                const Text(
+                                  "Welcome back",
+                                  style: TextStyle(
+                                      color: Colors.grey, fontSize: 10),
+                                ),
+                                const SizedBox(
+                                  height: 3,
+                                ),
+                                const Text(
+                                  "Sophia Calzoni",
+                                  style: TextStyle(
+                                      color: Colors.black, fontSize: 13),
+                                ),
+                              ],
                             ),
-                            SizedBox(
-                              height: 3,
-                            ),
-                            Text(
-                              "Sophia Calzoni",
-                              style:
-                                  TextStyle(color: Colors.black, fontSize: 13),
-                            ),
+                          ),
+                          actions: <Widget>[
+                            Padding(
+                              padding:
+                                  const EdgeInsets.only(right: 20, top: 20),
+                              child: Container(
+                                  width: 40.0,
+                                  height: 40.0,
+                                  decoration: BoxDecoration(
+                                      shape: BoxShape.circle,
+                                      color: Colors.white,
+                                      border: Border.all(
+                                          color: Colors.grey.shade300)),
+                                  child: const Icon(
+                                    Icons.menu,
+                                    color: Color(0xFF00AFB9),
+                                    size: 20,
+                                  )),
+                            ), //IconButton
                           ],
-                        ),
-                      ),
-                      actions: <Widget>[
-                        Padding(
-                          padding: const EdgeInsets.only(right: 20, top: 20),
-                          child: Container(
-                              width: 40.0,
-                              height: 40.0,
+                          leading: Padding(
+                            padding: const EdgeInsets.only(left: 20, top: 20),
+                            child: Container(
+                              width: 31.0,
+                              height: 31.0,
                               decoration: BoxDecoration(
                                   shape: BoxShape.circle,
                                   color: Colors.white,
                                   border:
                                       Border.all(color: Colors.grey.shade300)),
-                              child: Icon(
-                                Icons.menu,
-                                color: Color(0xFF00AFB9),
-                                size: 20,
-                              )),
-                        ), //IconButton
-                      ],
-                      leading: Padding(
-                        padding: const EdgeInsets.only(left: 20, top: 20),
-                        child: Container(
-                          width: 31.0,
-                          height: 31.0,
-                          decoration: BoxDecoration(
-                              shape: BoxShape.circle,
-                              color: Colors.white,
-                              border: Border.all(color: Colors.grey.shade300)),
-                          child: Image.asset(
-                            "assets/Ellipse.png",
-                            width: 30,
-                            height: 30,
+                              child: Image.asset(
+                                "assets/Ellipse.png",
+                                width: 30,
+                                height: 30,
+                              ),
+                            ),
                           ),
-                        ),
-                      ),
-                      elevation: 0,
-                    ),
+                          elevation: 0,
+                        )
+                      : null,
       body: itempage == "Statistics"
           ? statisticnavigationWidget()
           : itempage == "fbutton"
@@ -290,17 +294,17 @@ class _mainDashboardState extends State<mainDashboard> {
               : itempage == "My card"
                   ? mycardnavigationWidget()
                   : itempage == "fbutton"
-                      ? Text("My fbutton")
+                      ? const Text("My fbutton")
                       : itempage == "Profile"
-                          ? Text("Profile")
+                          ? const UserProfile()
                           : homenavigationWidget(),
       bottomNavigationBar: BottomNavigationBar(
         items: <BottomNavigationBarItem>[
-          BottomNavigationBarItem(
+          const BottomNavigationBarItem(
             icon: Icon(Icons.home),
             label: 'Home',
           ),
-          BottomNavigationBarItem(
+          const BottomNavigationBarItem(
             icon: Icon(Icons.signal_cellular_alt_rounded),
             label: 'Statistics',
           ),
@@ -310,20 +314,20 @@ class _mainDashboardState extends State<mainDashboard> {
                 height: 40.0,
                 decoration: BoxDecoration(
                     shape: BoxShape.circle,
-                    color: Color(0xFF00AFB9),
+                    color: const Color(0xFF00AFB9),
                     border: Border.all(color: Colors.grey.shade300)),
-                child: Icon(
+                child: const Icon(
                   Icons.add_box,
                   color: Colors.white,
                   size: 20,
                 )),
             label: '',
           ),
-          BottomNavigationBarItem(
+          const BottomNavigationBarItem(
             icon: Icon(Icons.credit_card_outlined),
             label: 'My card',
           ),
-          BottomNavigationBarItem(
+          const BottomNavigationBarItem(
             icon: Icon(Icons.person),
             label: 'Profile',
           ),

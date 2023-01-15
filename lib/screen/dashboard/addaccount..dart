@@ -19,12 +19,12 @@ class _addaccountState extends State<addaccount> {
           Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Padding(
-                padding: const EdgeInsets.only(left: 15, top: 30),
+              const Padding(
+                padding: EdgeInsets.only(left: 15, top: 30),
                 child: Text("Account Name",
                     style: TextStyle(fontWeight: FontWeight.bold)),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 10,
               ),
               Container(
@@ -32,7 +32,7 @@ class _addaccountState extends State<addaccount> {
                 decoration: BoxDecoration(
                     border: Border.all(color: Colors.grey.shade200),
                     color: Colors.grey.shade200,
-                    borderRadius: BorderRadius.all(Radius.circular(20))),
+                    borderRadius: const BorderRadius.all(Radius.circular(20))),
                 alignment: Alignment.center,
                 child: TextFormField(
                   // controller:
@@ -44,8 +44,8 @@ class _addaccountState extends State<addaccount> {
                     }
                     return null;
                   },
-                  style: TextStyle(color: Colors.black),
-                  decoration: InputDecoration(
+                  style: const TextStyle(color: Colors.black),
+                  decoration: const InputDecoration(
                     filled: true,
                     fillColor: Colors.white70,
                     hintText: 'Enter your account name here',
@@ -59,12 +59,12 @@ class _addaccountState extends State<addaccount> {
                   },
                 ),
               ),
-              Padding(
-                padding: const EdgeInsets.only(left: 15, top: 10),
+              const Padding(
+                padding: EdgeInsets.only(left: 15, top: 10),
                 child: Text("Account Number",
                     style: TextStyle(fontWeight: FontWeight.bold)),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 10,
               ),
               Container(
@@ -72,7 +72,7 @@ class _addaccountState extends State<addaccount> {
                 decoration: BoxDecoration(
                     border: Border.all(color: Colors.grey.shade200),
                     color: Colors.grey.shade200,
-                    borderRadius: BorderRadius.all(Radius.circular(20))),
+                    borderRadius: const BorderRadius.all(Radius.circular(20))),
                 alignment: Alignment.center,
                 child: TextFormField(
                   // controller:
@@ -84,8 +84,8 @@ class _addaccountState extends State<addaccount> {
                     }
                     return null;
                   },
-                  style: TextStyle(color: Colors.black),
-                  decoration: InputDecoration(
+                  style: const TextStyle(color: Colors.black),
+                  decoration: const InputDecoration(
                     filled: true,
                     fillColor: Colors.white70,
                     hintText: 'Enter your account number',
@@ -99,12 +99,12 @@ class _addaccountState extends State<addaccount> {
                   },
                 ),
               ),
-              Padding(
-                padding: const EdgeInsets.only(left: 15, top: 10),
+              const Padding(
+                padding: EdgeInsets.only(left: 15, top: 10),
                 child: Text("Bank Name",
                     style: TextStyle(fontWeight: FontWeight.bold)),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 10,
               ),
               Container(
@@ -112,7 +112,7 @@ class _addaccountState extends State<addaccount> {
                 decoration: BoxDecoration(
                     border: Border.all(color: Colors.grey.shade200),
                     color: Colors.grey.shade200,
-                    borderRadius: BorderRadius.all(Radius.circular(20))),
+                    borderRadius: const BorderRadius.all(Radius.circular(20))),
                 alignment: Alignment.center,
                 child: TextFormField(
                   // controller:
@@ -124,8 +124,8 @@ class _addaccountState extends State<addaccount> {
                     }
                     return null;
                   },
-                  style: TextStyle(color: Colors.black),
-                  decoration: InputDecoration(
+                  style: const TextStyle(color: Colors.black),
+                  decoration: const InputDecoration(
                     filled: true,
                     fillColor: Colors.white70,
                     hintText: 'Enter your bank name',
@@ -139,12 +139,12 @@ class _addaccountState extends State<addaccount> {
                   },
                 ),
               ),
-              Padding(
-                padding: const EdgeInsets.only(left: 15, top: 10),
+              const Padding(
+                padding: EdgeInsets.only(left: 15, top: 10),
                 child: Text("Phone Number",
                     style: TextStyle(fontWeight: FontWeight.bold)),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 10,
               ),
               Container(
@@ -152,7 +152,7 @@ class _addaccountState extends State<addaccount> {
                 decoration: BoxDecoration(
                     border: Border.all(color: Colors.grey.shade200),
                     color: Colors.grey.shade200,
-                    borderRadius: BorderRadius.all(Radius.circular(20))),
+                    borderRadius: const BorderRadius.all(Radius.circular(20))),
                 alignment: Alignment.center,
                 child: TextFormField(
                   // controller:
@@ -164,8 +164,8 @@ class _addaccountState extends State<addaccount> {
                     }
                     return null;
                   },
-                  style: TextStyle(color: Colors.black),
-                  decoration: InputDecoration(
+                  style: const TextStyle(color: Colors.black),
+                  decoration: const InputDecoration(
                     filled: true,
                     fillColor: Colors.white70,
                     hintText: 'Enter your phone number',
@@ -179,12 +179,12 @@ class _addaccountState extends State<addaccount> {
                   },
                 ),
               ),
-              Padding(
-                padding: const EdgeInsets.only(left: 15, top: 10),
+              const Padding(
+                padding: EdgeInsets.only(left: 15, top: 10),
                 child: Text("Email Address",
                     style: TextStyle(fontWeight: FontWeight.bold)),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 10,
               ),
               Container(
@@ -192,7 +192,7 @@ class _addaccountState extends State<addaccount> {
                 decoration: BoxDecoration(
                     border: Border.all(color: Colors.grey.shade200),
                     color: Colors.grey.shade200,
-                    borderRadius: BorderRadius.all(Radius.circular(20))),
+                    borderRadius: const BorderRadius.all(Radius.circular(20))),
                 alignment: Alignment.center,
                 child: TextFormField(
                   // controller:
@@ -204,8 +204,8 @@ class _addaccountState extends State<addaccount> {
                     }
                     return null;
                   },
-                  style: TextStyle(color: Colors.black),
-                  decoration: InputDecoration(
+                  style: const TextStyle(color: Colors.black),
+                  decoration: const InputDecoration(
                     filled: true,
                     fillColor: Colors.white70,
                     hintText: 'Enter your email address',
@@ -224,9 +224,9 @@ class _addaccountState extends State<addaccount> {
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Text("Card Number",
+                    const Text("Card Number",
                         style: TextStyle(fontWeight: FontWeight.bold)),
-                    SizedBox(
+                    const SizedBox(
                       height: 10,
                     ),
                     Container(
@@ -234,7 +234,8 @@ class _addaccountState extends State<addaccount> {
                       decoration: BoxDecoration(
                           border: Border.all(color: Colors.grey.shade200),
                           color: Colors.grey.shade200,
-                          borderRadius: BorderRadius.all(Radius.circular(20))),
+                          borderRadius:
+                              const BorderRadius.all(Radius.circular(20))),
                       alignment: Alignment.center,
                       child: TextFormField(
                         // controller:
@@ -246,7 +247,7 @@ class _addaccountState extends State<addaccount> {
                           }
                           return null;
                         },
-                        style: TextStyle(color: Colors.black),
+                        style: const TextStyle(color: Colors.black),
                         decoration: InputDecoration(
                           filled: true,
                           fillColor: Colors.white70,
@@ -259,8 +260,8 @@ class _addaccountState extends State<addaccount> {
                               height: 30,
                             ),
                           ),
-                          hintStyle: TextStyle(fontSize: 11),
-                          border: OutlineInputBorder(
+                          hintStyle: const TextStyle(fontSize: 11),
+                          border: const OutlineInputBorder(
                               borderRadius:
                                   BorderRadius.all(Radius.circular(10)),
                               borderSide: BorderSide.none),
@@ -284,11 +285,11 @@ class _addaccountState extends State<addaccount> {
                         Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
-                            Text(
+                            const Text(
                               "EXP",
                               style: TextStyle(fontWeight: FontWeight.bold),
                             ),
-                            SizedBox(
+                            const SizedBox(
                               height: 10,
                             ),
                             Container(
@@ -298,8 +299,8 @@ class _addaccountState extends State<addaccount> {
                                   border:
                                       Border.all(color: Colors.grey.shade200),
                                   color: Colors.grey.shade200,
-                                  borderRadius:
-                                      BorderRadius.all(Radius.circular(20))),
+                                  borderRadius: const BorderRadius.all(
+                                      Radius.circular(20))),
                               alignment: Alignment.center,
                               child: TextFormField(
                                 // controller:
@@ -311,8 +312,8 @@ class _addaccountState extends State<addaccount> {
                                   }
                                   return null;
                                 },
-                                style: TextStyle(color: Colors.black),
-                                decoration: InputDecoration(
+                                style: const TextStyle(color: Colors.black),
+                                decoration: const InputDecoration(
                                   filled: true,
                                   fillColor: Colors.white70,
                                   hintText: 'MM/YYYY',
@@ -332,11 +333,11 @@ class _addaccountState extends State<addaccount> {
                         Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
-                            Text(
+                            const Text(
                               "CVV",
                               style: TextStyle(fontWeight: FontWeight.bold),
                             ),
-                            SizedBox(
+                            const SizedBox(
                               height: 10,
                             ),
                             Container(
@@ -346,8 +347,8 @@ class _addaccountState extends State<addaccount> {
                                   border:
                                       Border.all(color: Colors.grey.shade200),
                                   color: Colors.grey.shade200,
-                                  borderRadius:
-                                      BorderRadius.all(Radius.circular(20))),
+                                  borderRadius: const BorderRadius.all(
+                                      Radius.circular(20))),
                               alignment: Alignment.center,
                               child: TextFormField(
                                 // controller:
@@ -359,8 +360,8 @@ class _addaccountState extends State<addaccount> {
                                   }
                                   return null;
                                 },
-                                style: TextStyle(color: Colors.black),
-                                decoration: InputDecoration(
+                                style: const TextStyle(color: Colors.black),
+                                decoration: const InputDecoration(
                                   filled: true,
                                   fillColor: Colors.white70,
                                   hintText: '000',
@@ -392,16 +393,16 @@ class _addaccountState extends State<addaccount> {
                       padding:
                           const EdgeInsets.only(left: 90, top: 15, bottom: 15),
                       decoration: BoxDecoration(
-                        border: Border.all(color: Color(0xFF00AFB9)),
+                        border: Border.all(color: const Color(0xFF00AFB9)),
                         // color: Color(0xFF#3A3939),
-                        borderRadius: BorderRadius.all(
+                        borderRadius: const BorderRadius.all(
                           Radius.circular(15),
                         ),
                       ),
                       alignment: Alignment.center,
                       child: Row(
                         children: [
-                          Text(
+                          const Text(
                             "Add Account",
                             style: TextStyle(color: Color(0xFF00AFB9)),
                           ),

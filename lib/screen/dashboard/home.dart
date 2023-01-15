@@ -1,7 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/src/foundation/key.dart';
-import 'package:flutter/src/widgets/container.dart';
-import 'package:flutter/src/widgets/framework.dart';
 import 'package:fraudsentry/screen/dashboard/addnewcard.dart';
 import 'package:fraudsentry/screen/dashboard/monitoring.dart';
 import 'package:fraudsentry/screen/dashboard/statanltics.dart';
@@ -21,50 +18,50 @@ class _homepageState extends State<homepage> {
       children: [
         Column(
           children: [
-            SizedBox(
+            const SizedBox(
               height: 20,
             ),
             Padding(
               padding: const EdgeInsets.all(20.0),
               child: Container(
                   padding: const EdgeInsets.all(20.0),
-                  decoration: BoxDecoration(
+                  decoration: const BoxDecoration(
                     borderRadius: BorderRadius.all(Radius.circular(15)),
                     color: Color(0xFF00AFB9),
                   ),
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      Text(
+                      const Text(
                         "X-Card",
                         style: TextStyle(color: Colors.white, fontSize: 12),
                       ),
-                      SizedBox(
+                      const SizedBox(
                         height: 20,
                       ),
-                      Text(
+                      const Text(
                         "Balance",
                         style: TextStyle(color: Colors.white54, fontSize: 13),
                       ),
-                      SizedBox(
+                      const SizedBox(
                         height: 10,
                       ),
-                      Text(
+                      const Text(
                         "0.000,00",
                         style: TextStyle(color: Colors.white, fontSize: 20),
                       ),
-                      SizedBox(
+                      const SizedBox(
                         height: 20,
                       ),
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
-                          Text(
+                          const Text(
                             "****  **** 0000",
                             style:
                                 TextStyle(color: Colors.white54, fontSize: 13),
                           ),
-                          Text(
+                          const Text(
                             "****",
                             style: TextStyle(color: Colors.white, fontSize: 13),
                           ),
@@ -73,7 +70,7 @@ class _homepageState extends State<homepage> {
                     ],
                   )),
             ),
-            SizedBox(
+            const SizedBox(
               height: 5,
             ),
             InkWell(
@@ -88,18 +85,18 @@ class _homepageState extends State<homepage> {
                   padding: const EdgeInsets.only(
                       left: 50, right: 50, top: 10, bottom: 10),
                   decoration: BoxDecoration(
-                    border: Border.all(color: Color(0xFF00AFB9)),
+                    border: Border.all(color: const Color(0xFF00AFB9)),
                     // color: Color(0xFF#3A3939),
-                    borderRadius: BorderRadius.all(
+                    borderRadius: const BorderRadius.all(
                       Radius.circular(15),
                     ),
                   ),
-                  child: Text(
+                  child: const Text(
                     "Add Card",
                     style: TextStyle(color: Color(0xFF00AFB9)),
                   )),
             ),
-            SizedBox(
+            const SizedBox(
               height: 60,
             ),
             Padding(
@@ -111,13 +108,14 @@ class _homepageState extends State<homepage> {
                     width: 155,
                     height: 130,
                     decoration: BoxDecoration(
-                      borderRadius: BorderRadius.all(Radius.circular(15)),
+                      borderRadius: const BorderRadius.all(Radius.circular(15)),
                       boxShadow: [
                         BoxShadow(
                           color: Colors.grey.withOpacity(0.2),
                           spreadRadius: 5,
                           blurRadius: 7,
-                          offset: Offset(0, 3), // changes position of shadow
+                          offset:
+                              const Offset(0, 3), // changes position of shadow
                         ),
                       ],
                       color: Colors.white,
@@ -131,20 +129,20 @@ class _homepageState extends State<homepage> {
                               padding: const EdgeInsets.all(5),
                               decoration: BoxDecoration(
                                 borderRadius:
-                                    BorderRadius.all(Radius.circular(5)),
+                                    const BorderRadius.all(Radius.circular(5)),
                                 color: Colors.grey.shade200,
                               ),
-                              child: Icon(Icons.person)),
-                          SizedBox(
+                              child: const Icon(Icons.person)),
+                          const SizedBox(
                             height: 15,
                           ),
-                          Text("Profile",
+                          const Text("Profile",
                               style: TextStyle(
                                   fontWeight: FontWeight.bold, fontSize: 13)),
-                          SizedBox(
+                          const SizedBox(
                             height: 10,
                           ),
-                          Text(
+                          const Text(
                             "Lorem ipsum",
                             style: TextStyle(color: Colors.grey, fontSize: 10),
                           ),
@@ -164,13 +162,15 @@ class _homepageState extends State<homepage> {
                       width: 155,
                       height: 130,
                       decoration: BoxDecoration(
-                        borderRadius: BorderRadius.all(Radius.circular(15)),
+                        borderRadius:
+                            const BorderRadius.all(Radius.circular(15)),
                         boxShadow: [
                           BoxShadow(
                             color: Colors.grey.withOpacity(0.2),
                             spreadRadius: 5,
                             blurRadius: 7,
-                            offset: Offset(0, 3), // changes position of shadow
+                            offset: const Offset(
+                                0, 3), // changes position of shadow
                           ),
                         ],
                         color: Colors.white,
@@ -183,21 +183,21 @@ class _homepageState extends State<homepage> {
                             Container(
                                 padding: const EdgeInsets.all(5),
                                 decoration: BoxDecoration(
-                                  borderRadius:
-                                      BorderRadius.all(Radius.circular(5)),
+                                  borderRadius: const BorderRadius.all(
+                                      Radius.circular(5)),
                                   color: Colors.grey.shade200,
                                 ),
-                                child: Icon(Icons.radio)),
-                            SizedBox(
+                                child: const Icon(Icons.radio)),
+                            const SizedBox(
                               height: 15,
                             ),
-                            Text("Transcation Details",
+                            const Text("Transcation Details",
                                 style: TextStyle(
                                     fontWeight: FontWeight.bold, fontSize: 13)),
-                            SizedBox(
+                            const SizedBox(
                               height: 10,
                             ),
-                            Text(
+                            const Text(
                               "Lorem ipsum",
                               style:
                                   TextStyle(color: Colors.grey, fontSize: 10),
@@ -227,13 +227,15 @@ class _homepageState extends State<homepage> {
                       width: 155,
                       height: 130,
                       decoration: BoxDecoration(
-                        borderRadius: BorderRadius.all(Radius.circular(15)),
+                        borderRadius:
+                            const BorderRadius.all(Radius.circular(15)),
                         boxShadow: [
                           BoxShadow(
                             color: Colors.grey.withOpacity(0.2),
                             spreadRadius: 5,
                             blurRadius: 7,
-                            offset: Offset(0, 3), // changes position of shadow
+                            offset: const Offset(
+                                0, 3), // changes position of shadow
                           ),
                         ],
                         color: Colors.white,
@@ -246,21 +248,22 @@ class _homepageState extends State<homepage> {
                             Container(
                                 padding: const EdgeInsets.all(5),
                                 decoration: BoxDecoration(
-                                  borderRadius:
-                                      BorderRadius.all(Radius.circular(5)),
+                                  borderRadius: const BorderRadius.all(
+                                      Radius.circular(5)),
                                   color: Colors.grey.shade200,
                                 ),
-                                child: Icon(Icons.signal_cellular_alt_rounded)),
-                            SizedBox(
+                                child: const Icon(
+                                    Icons.signal_cellular_alt_rounded)),
+                            const SizedBox(
                               height: 15,
                             ),
-                            Text("Stats",
+                            const Text("Stats",
                                 style: TextStyle(
                                     fontWeight: FontWeight.bold, fontSize: 13)),
-                            SizedBox(
+                            const SizedBox(
                               height: 10,
                             ),
-                            Text(
+                            const Text(
                               "Lorem ipsum",
                               style:
                                   TextStyle(color: Colors.grey, fontSize: 10),
@@ -281,14 +284,15 @@ class _homepageState extends State<homepage> {
                         width: 155,
                         height: 130,
                         decoration: BoxDecoration(
-                          borderRadius: BorderRadius.all(Radius.circular(15)),
+                          borderRadius:
+                              const BorderRadius.all(Radius.circular(15)),
                           boxShadow: [
                             BoxShadow(
                               color: Colors.grey.withOpacity(0.2),
                               spreadRadius: 5,
                               blurRadius: 7,
-                              offset:
-                                  Offset(0, 3), // changes position of shadow
+                              offset: const Offset(
+                                  0, 3), // changes position of shadow
                             ),
                           ],
                           color: Colors.white,
@@ -301,22 +305,22 @@ class _homepageState extends State<homepage> {
                               Container(
                                   padding: const EdgeInsets.all(5),
                                   decoration: BoxDecoration(
-                                    borderRadius:
-                                        BorderRadius.all(Radius.circular(5)),
+                                    borderRadius: const BorderRadius.all(
+                                        Radius.circular(5)),
                                     color: Colors.grey.shade200,
                                   ),
-                                  child: Icon(Icons.visibility)),
-                              SizedBox(
+                                  child: const Icon(Icons.visibility)),
+                              const SizedBox(
                                 height: 15,
                               ),
-                              Text("Monitoring",
+                              const Text("Monitoring",
                                   style: TextStyle(
                                       fontWeight: FontWeight.bold,
                                       fontSize: 13)),
-                              SizedBox(
+                              const SizedBox(
                                 height: 10,
                               ),
-                              Text(
+                              const Text(
                                 "Lorem ipsum",
                                 style:
                                     TextStyle(color: Colors.grey, fontSize: 10),

@@ -38,6 +38,7 @@ dependencies:
   charts_flutter:
   syncfusion_flutter_charts:
   pie_chart:
+  # dotted_border: ^1.0.7
 
 dev_dependencies:
   flutter_test:
@@ -66,6 +67,11 @@ flutter:
    - assets/illustration.png
    - assets/Ellipse.png
    - assets/image 7.png
+   - assets/Group 162705.png
+   - assets/Padlock.png
+   - assets/Chatting.png
+   - assets/Secure Shield(1).png
+   - assets/Secure Shield.png
 
 
   # An image asset can refer to one or more resolution-specific "variants", see

@@ -1,6 +1,6 @@
 # Fraudsentry
 
-This is a Fraud Detection Software that helps individuals, businesses and organizations identify and prevent fraudulent activities. It uses advanced machine learning algorithms to analyze transactions and detect patterns that may indicate fraudulent activity and reports it to the appropriate unit (authorities).
+This is a fraud detection software that analyzes, identifies, prevents, and reports fraudulent anomalies (activities).
 
 ## Getting Started
 - [1: Sign up for a FraudSentry account by visiting fraudsentry.com)

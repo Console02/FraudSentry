@@ -43,7 +43,7 @@ class _createPasswordState extends State<createPassword> {
                           height: 67,
                         ),
                       ),
-                      Text(
+                      const Text(
                         "Success",
                         // style: TextStyle(fontSize: 16,),
                         textAlign: TextAlign.center,
@@ -56,7 +56,7 @@ class _createPasswordState extends State<createPassword> {
                           textAlign: TextAlign.center,
                         ),
                       ),
-                      SizedBox(
+                      const SizedBox(
                         height: 20,
                       ),
                       InkWell(
@@ -66,14 +66,14 @@ class _createPasswordState extends State<createPassword> {
                         child: Container(
                             width: 150,
                             height: 45,
-                            decoration: BoxDecoration(
+                            decoration: const BoxDecoration(
                               color: Color(0xFF00AFB9),
                               borderRadius: BorderRadius.all(
                                 Radius.circular(15),
                               ),
                             ),
                             alignment: Alignment.center,
-                            child: Text(
+                            child: const Text(
                               "Continue",
                               style: TextStyle(color: Colors.white),
                             )),
@@ -93,7 +93,7 @@ class _createPasswordState extends State<createPassword> {
   Widget build(BuildContext context) {
     return Scaffold(
         // appBar: AppBar(),
-        body: ListView(padding: EdgeInsets.all(20), children: <Widget>[
+        body: ListView(padding: const EdgeInsets.all(20), children: <Widget>[
       Padding(
         padding: const EdgeInsets.only(top: 40, left: 20, right: 20),
         child: Column(
@@ -112,14 +112,14 @@ class _createPasswordState extends State<createPassword> {
                           shape: BoxShape.circle,
                           color: Colors.white,
                           border: Border.all(color: Colors.grey.shade300)),
-                      child: Icon(
+                      child: const Icon(
                         Icons.arrow_back_ios_sharp,
                         size: 17,
                       )),
                 ),
               ],
             ),
-            SizedBox(
+            const SizedBox(
               height: 30,
             ),
             Padding(
@@ -127,30 +127,30 @@ class _createPasswordState extends State<createPassword> {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
-                  Text("Create a ",
+                  const Text("Create a ",
                       style:
                           TextStyle(fontWeight: FontWeight.bold, fontSize: 20)),
-                  Text("New Password",
+                  const Text("New Password",
                       style:
                           TextStyle(fontWeight: FontWeight.bold, fontSize: 20)),
-                  SizedBox(
+                  const SizedBox(
                     height: 10,
                   ),
-                  Text(
+                  const Text(
                     "Enter your new password",
                     style: TextStyle(color: Colors.grey, fontSize: 10),
                   ),
                 ],
               ),
             ),
-            SizedBox(
+            const SizedBox(
               height: 50,
             ),
             Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Text("Passcode"),
-                SizedBox(
+                const Text("Passcode"),
+                const SizedBox(
                   height: 15,
                 ),
                 Container(
@@ -158,7 +158,8 @@ class _createPasswordState extends State<createPassword> {
                   decoration: BoxDecoration(
                       border: Border.all(color: Colors.grey.shade300),
                       color: Colors.grey.shade300,
-                      borderRadius: BorderRadius.all(Radius.circular(20))),
+                      borderRadius:
+                          const BorderRadius.all(Radius.circular(20))),
                   alignment: Alignment.center,
                   child: TextFormField(
                     // controller:
@@ -169,8 +170,8 @@ class _createPasswordState extends State<createPassword> {
                       }
                       return null;
                     },
-                    style: TextStyle(color: Colors.black),
-                    decoration: InputDecoration(
+                    style: const TextStyle(color: Colors.black),
+                    decoration: const InputDecoration(
                       filled: true,
                       fillColor: Colors.white70,
                       hintText: 'Enter your passcode',
@@ -184,11 +185,11 @@ class _createPasswordState extends State<createPassword> {
                     },
                   ),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 20,
                 ),
-                Text("Password"),
-                SizedBox(
+                const Text("Password"),
+                const SizedBox(
                   height: 15,
                 ),
                 Container(
@@ -196,7 +197,8 @@ class _createPasswordState extends State<createPassword> {
                   decoration: BoxDecoration(
                       border: Border.all(color: Colors.grey.shade300),
                       color: Colors.grey.shade300,
-                      borderRadius: BorderRadius.all(Radius.circular(20))),
+                      borderRadius:
+                          const BorderRadius.all(Radius.circular(20))),
                   alignment: Alignment.center,
                   child: TextFormField(
                     // controller:
@@ -209,7 +211,7 @@ class _createPasswordState extends State<createPassword> {
                       }
                       return null;
                     },
-                    style: TextStyle(color: Colors.black),
+                    style: const TextStyle(color: Colors.black),
                     decoration: InputDecoration(
                       filled: true,
                       fillColor: Colors.white70,
@@ -227,8 +229,8 @@ class _createPasswordState extends State<createPassword> {
                           color: Colors.black,
                         ),
                       ),
-                      hintStyle: TextStyle(fontSize: 11),
-                      border: OutlineInputBorder(
+                      hintStyle: const TextStyle(fontSize: 11),
+                      border: const OutlineInputBorder(
                           borderRadius: BorderRadius.all(Radius.circular(10)),
                           borderSide: BorderSide.none),
                     ),
@@ -237,11 +239,11 @@ class _createPasswordState extends State<createPassword> {
                     },
                   ),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 20,
                 ),
-                Text("Confirm Password"),
-                SizedBox(
+                const Text("Confirm Password"),
+                const SizedBox(
                   height: 15,
                 ),
                 Container(
@@ -249,7 +251,8 @@ class _createPasswordState extends State<createPassword> {
                   decoration: BoxDecoration(
                       border: Border.all(color: Colors.grey.shade300),
                       color: Colors.grey.shade300,
-                      borderRadius: BorderRadius.all(Radius.circular(20))),
+                      borderRadius:
+                          const BorderRadius.all(Radius.circular(20))),
                   alignment: Alignment.center,
                   child: TextFormField(
                     // controller:
@@ -262,7 +265,7 @@ class _createPasswordState extends State<createPassword> {
                       }
                       return null;
                     },
-                    style: TextStyle(color: Colors.black),
+                    style: const TextStyle(color: Colors.black),
                     decoration: InputDecoration(
                       filled: true,
                       fillColor: Colors.white70,
@@ -280,8 +283,8 @@ class _createPasswordState extends State<createPassword> {
                           color: Colors.black,
                         ),
                       ),
-                      hintStyle: TextStyle(fontSize: 11),
-                      border: OutlineInputBorder(
+                      hintStyle: const TextStyle(fontSize: 11),
+                      border: const OutlineInputBorder(
                           borderRadius: BorderRadius.all(Radius.circular(10)),
                           borderSide: BorderSide.none),
                     ),
@@ -290,7 +293,7 @@ class _createPasswordState extends State<createPassword> {
                     },
                   ),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 50,
                 ),
                 InkWell(
@@ -300,14 +303,14 @@ class _createPasswordState extends State<createPassword> {
                   child: Container(
                       // width: 200,
                       height: 35,
-                      decoration: BoxDecoration(
+                      decoration: const BoxDecoration(
                         color: Color(0xFF00AFB9),
                         borderRadius: BorderRadius.all(
                           Radius.circular(15),
                         ),
                       ),
                       alignment: Alignment.center,
-                      child: Text(
+                      child: const Text(
                         "Next",
                         style: TextStyle(color: Colors.white),
                       )),

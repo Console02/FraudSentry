@@ -38,7 +38,8 @@ dependencies:
   charts_flutter:
   syncfusion_flutter_charts:
   pie_chart:
-  # dotted_border: ^1.0.7
+  google_fonts: 
+  flutter_svg: 
 
 dev_dependencies:
   flutter_test:
@@ -71,6 +72,8 @@ flutter:
    - assets/Padlock.png
    - assets/Chatting.png
    - assets/Secure Shield.png
+   - assets/icons/
+   - assets/images/
 
 
 

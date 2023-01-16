@@ -31,7 +31,7 @@ class _staticspageState extends State<staticspage> {
                     "Money Recieved ",
                     style: TextStyle(color: Colors.grey.shade300),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     width: 30,
                   ),
                   Text(
@@ -40,9 +40,9 @@ class _staticspageState extends State<staticspage> {
                   ),
                 ],
               ),
-              SizedBox(height: 15),
+              const SizedBox(height: 15),
               Column(
-                children: [
+                children: const [
                   Text("336,77K",
                       style: TextStyle(
                           color: Color(0xFF00AFB9),
@@ -93,7 +93,7 @@ class _staticspageState extends State<staticspage> {
               //     ),
               //   )
               // ]),
-              SizedBox(
+              const SizedBox(
                 height: 30,
               ),
               Row(
@@ -101,15 +101,15 @@ class _staticspageState extends State<staticspage> {
                 children: [
                   controler1 == true
                       ? Container(
-                          padding: EdgeInsets.only(
+                          padding: const EdgeInsets.only(
                               left: 15, right: 15, top: 3, bottom: 3),
                           decoration: BoxDecoration(
-                              color: Color(0xFF00AFB9),
-                              borderRadius: BorderRadius.all(
+                              color: const Color(0xFF00AFB9),
+                              borderRadius: const BorderRadius.all(
                                 Radius.circular(15),
                               ),
                               border: Border.all(color: Colors.grey.shade300)),
-                          child: Text(
+                          child: const Text(
                             "Oct to Dec",
                             style: TextStyle(color: Colors.white),
                           ))
@@ -122,18 +122,18 @@ class _staticspageState extends State<staticspage> {
                               controler4 = false;
                             });
                           },
-                          child: Text("Oct to Dec")),
+                          child: const Text("Oct to Dec")),
                   controler2 == true
                       ? Container(
-                          padding: EdgeInsets.only(
+                          padding: const EdgeInsets.only(
                               left: 15, right: 15, top: 3, bottom: 3),
                           decoration: BoxDecoration(
-                              color: Color(0xFF00AFB9),
-                              borderRadius: BorderRadius.all(
+                              color: const Color(0xFF00AFB9),
+                              borderRadius: const BorderRadius.all(
                                 Radius.circular(15),
                               ),
                               border: Border.all(color: Colors.grey.shade300)),
-                          child: Text(
+                          child: const Text(
                             "1M",
                             style: TextStyle(color: Colors.white),
                           ))
@@ -146,18 +146,18 @@ class _staticspageState extends State<staticspage> {
                               controler4 = false;
                             });
                           },
-                          child: Text("1m")),
+                          child: const Text("1m")),
                   controler3 == true
                       ? Container(
-                          padding: EdgeInsets.only(
+                          padding: const EdgeInsets.only(
                               left: 15, right: 15, top: 3, bottom: 3),
                           decoration: BoxDecoration(
-                              color: Color(0xFF00AFB9),
-                              borderRadius: BorderRadius.all(
+                              color: const Color(0xFF00AFB9),
+                              borderRadius: const BorderRadius.all(
                                 Radius.circular(15),
                               ),
                               border: Border.all(color: Colors.grey.shade300)),
-                          child: Text(
+                          child: const Text(
                             "6M",
                             style: TextStyle(color: Colors.white),
                           ))
@@ -170,18 +170,18 @@ class _staticspageState extends State<staticspage> {
                               controler4 = false;
                             });
                           },
-                          child: Text("6m")),
+                          child: const Text("6m")),
                   controler4 == true
                       ? Container(
-                          padding: EdgeInsets.only(
+                          padding: const EdgeInsets.only(
                               left: 15, right: 15, top: 3, bottom: 3),
                           decoration: BoxDecoration(
-                              color: Color(0xFF00AFB9),
-                              borderRadius: BorderRadius.all(
+                              color: const Color(0xFF00AFB9),
+                              borderRadius: const BorderRadius.all(
                                 Radius.circular(15),
                               ),
                               border: Border.all(color: Colors.grey.shade300)),
-                          child: Text(
+                          child: const Text(
                             "January",
                             style: TextStyle(color: Colors.white),
                           ))
@@ -195,15 +195,15 @@ class _staticspageState extends State<staticspage> {
                               ;
                             });
                           },
-                          child: Text("january")),
+                          child: const Text("january")),
                 ],
               ),
-              SizedBox(
+              const SizedBox(
                 height: 20,
               ),
               controler2
                   ? Column(
-                      children: [
+                      children: const [
                         Text(
                           "Portfolio2",
                           style: TextStyle(fontWeight: FontWeight.bold),
@@ -212,7 +212,7 @@ class _staticspageState extends State<staticspage> {
                     )
                   : controler3
                       ? Column(
-                          children: [
+                          children: const [
                             Text(
                               "Portfolio3",
                               style: TextStyle(fontWeight: FontWeight.bold),
@@ -221,7 +221,7 @@ class _staticspageState extends State<staticspage> {
                         )
                       : controler4
                           ? Column(
-                              children: [
+                              children: const [
                                 Text(
                                   "Portfolio4",
                                   style: TextStyle(fontWeight: FontWeight.bold),
@@ -231,11 +231,11 @@ class _staticspageState extends State<staticspage> {
                           : Column(
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
-                                Text(
+                                const Text(
                                   "Portfolio",
                                   style: TextStyle(fontWeight: FontWeight.bold),
                                 ),
-                                SizedBox(
+                                const SizedBox(
                                   height: 20,
                                 ),
                                 Row(
@@ -249,16 +249,16 @@ class _staticspageState extends State<staticspage> {
                                           width: 40,
                                           height: 40,
                                         ),
-                                        SizedBox(
+                                        const SizedBox(
                                           width: 15,
                                         ),
-                                        Text("Automatic"),
+                                        const Text("Automatic"),
                                       ],
                                     ),
-                                    Text("Dec 21 2022"),
+                                    const Text("Dec 21 2022"),
                                   ],
                                 ),
-                                SizedBox(
+                                const SizedBox(
                                   height: 20,
                                 ),
                                 Row(
@@ -272,16 +272,16 @@ class _staticspageState extends State<staticspage> {
                                           width: 40,
                                           height: 40,
                                         ),
-                                        SizedBox(
+                                        const SizedBox(
                                           width: 15,
                                         ),
-                                        Text("Automatic"),
+                                        const Text("Automatic"),
                                       ],
                                     ),
-                                    Text("Dec 21 2022"),
+                                    const Text("Dec 21 2022"),
                                   ],
                                 ),
-                                SizedBox(
+                                const SizedBox(
                                   height: 20,
                                 ),
                                 Row(
@@ -295,13 +295,13 @@ class _staticspageState extends State<staticspage> {
                                           width: 40,
                                           height: 40,
                                         ),
-                                        SizedBox(
+                                        const SizedBox(
                                           width: 15,
                                         ),
-                                        Text("Automatic"),
+                                        const Text("Automatic"),
                                       ],
                                     ),
-                                    Text("Dec 21 2022"),
+                                    const Text("Dec 21 2022"),
                                   ],
                                 )
                               ],

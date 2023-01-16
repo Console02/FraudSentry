@@ -23,8 +23,8 @@ class _anylyticsstartState extends State<anylyticsstart> {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.white,
-        title: Padding(
-          padding: const EdgeInsets.only(right: 5, top: 20, left: 90),
+        title: const Padding(
+          padding: EdgeInsets.only(right: 5, top: 20, left: 90),
           child: Text(
             "Stats",
             style: TextStyle(color: Colors.black, fontSize: 25),
@@ -43,7 +43,7 @@ class _anylyticsstartState extends State<anylyticsstart> {
                     shape: BoxShape.circle,
                     color: Colors.white,
                     border: Border.all(color: Colors.grey.shade300)),
-                child: Icon(
+                child: const Icon(
                   Icons.arrow_back_ios_new_outlined,
                   color: Colors.black,
                   size: 20,
@@ -77,11 +77,11 @@ class _anylyticsstartState extends State<anylyticsstart> {
         children: [
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
-            children: [
+            children: const [
               Text("Analytics for logins"),
             ],
           ),
-          SizedBox(
+          const SizedBox(
             height: 40,
           ),
           Center(
@@ -109,13 +109,13 @@ class _anylyticsstartState extends State<anylyticsstart> {
               ),
             ),
           ),
-          SizedBox(
+          const SizedBox(
             height: 40,
           ),
           Container(
             // width: 200,
             height: 40,
-            decoration: BoxDecoration(
+            decoration: const BoxDecoration(
               color: Color(0xFF00AFB9),
               borderRadius: BorderRadius.all(
                 Radius.circular(0),
@@ -126,7 +126,7 @@ class _anylyticsstartState extends State<anylyticsstart> {
               padding: const EdgeInsets.only(left: 20, right: 20),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
+                children: const [
                   Text(
                     "Fraud Block Tracker",
                     style: TextStyle(
@@ -141,8 +141,8 @@ class _anylyticsstartState extends State<anylyticsstart> {
               ),
             ),
           ),
-          Padding(
-            padding: const EdgeInsets.only(left: 25, right: 25, top: 25),
+          const Padding(
+            padding: EdgeInsets.only(left: 25, right: 25, top: 25),
             child: SizedBox(
               width: 250,
               child: Text(
@@ -154,7 +154,7 @@ class _anylyticsstartState extends State<anylyticsstart> {
             child: Container(
               width: 180,
               height: 40,
-              decoration: BoxDecoration(
+              decoration: const BoxDecoration(
                 color: Color(0xFF00AFB9),
                 borderRadius: BorderRadius.all(
                   Radius.circular(5),
@@ -167,7 +167,7 @@ class _anylyticsstartState extends State<anylyticsstart> {
                 ),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
+                  children: const [
                     Text(
                       "Review",
                       style: TextStyle(

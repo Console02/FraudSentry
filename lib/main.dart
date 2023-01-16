@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:fraudsentry/screen/auth/onboarding/onboarding1.dart';
 import 'package:fraudsentry/screen/auth/onboarding/splashscreen.dart';
 import 'package:fraudsentry/screen/auth/signin.dart';
-import 'package:fraudsentry/screen/auth/signup.dart';
 
 void main() {
   runApp(const MyApp());

@@ -13,7 +13,7 @@ class _forgetPaaswordState extends State<forgetPaasword> {
   Widget build(BuildContext context) {
     return Scaffold(
         // appBar: AppBar(),
-        body: ListView(padding: EdgeInsets.all(20), children: <Widget>[
+        body: ListView(padding: const EdgeInsets.all(20), children: <Widget>[
       Padding(
         padding: const EdgeInsets.only(top: 40, left: 20, right: 20),
         child: Column(
@@ -32,14 +32,14 @@ class _forgetPaaswordState extends State<forgetPaasword> {
                           shape: BoxShape.circle,
                           color: Colors.white,
                           border: Border.all(color: Colors.grey.shade300)),
-                      child: Icon(
+                      child: const Icon(
                         Icons.arrow_back_ios_sharp,
                         size: 17,
                       )),
                 ),
               ],
             ),
-            SizedBox(
+            const SizedBox(
               height: 30,
             ),
             Padding(
@@ -47,27 +47,27 @@ class _forgetPaaswordState extends State<forgetPaasword> {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
-                  Text("Forget Password",
+                  const Text("Forget Password",
                       style:
                           TextStyle(fontWeight: FontWeight.bold, fontSize: 20)),
-                  SizedBox(
+                  const SizedBox(
                     height: 10,
                   ),
-                  Text(
+                  const Text(
                     "Recover your account password",
                     style: TextStyle(color: Colors.grey, fontSize: 10),
                   ),
                 ],
               ),
             ),
-            SizedBox(
+            const SizedBox(
               height: 50,
             ),
             Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Text("E-mail"),
-                SizedBox(
+                const Text("E-mail"),
+                const SizedBox(
                   height: 15,
                 ),
                 Container(
@@ -75,7 +75,8 @@ class _forgetPaaswordState extends State<forgetPaasword> {
                   decoration: BoxDecoration(
                       border: Border.all(color: Colors.grey.shade300),
                       color: Colors.grey.shade300,
-                      borderRadius: BorderRadius.all(Radius.circular(20))),
+                      borderRadius:
+                          const BorderRadius.all(Radius.circular(20))),
                   alignment: Alignment.center,
                   child: TextFormField(
                     // controller:
@@ -86,8 +87,8 @@ class _forgetPaaswordState extends State<forgetPaasword> {
                       }
                       return null;
                     },
-                    style: TextStyle(color: Colors.black),
-                    decoration: InputDecoration(
+                    style: const TextStyle(color: Colors.black),
+                    decoration: const InputDecoration(
                       filled: true,
                       fillColor: Colors.white70,
                       hintText: 'Enter your Email Address',
@@ -101,7 +102,7 @@ class _forgetPaaswordState extends State<forgetPaasword> {
                     },
                   ),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 50,
                 ),
                 InkWell(
@@ -115,14 +116,14 @@ class _forgetPaaswordState extends State<forgetPaasword> {
                   child: Container(
                       // width: 200,
                       height: 35,
-                      decoration: BoxDecoration(
+                      decoration: const BoxDecoration(
                         color: Color(0xFF00AFB9),
                         borderRadius: BorderRadius.all(
                           Radius.circular(15),
                         ),
                       ),
                       alignment: Alignment.center,
-                      child: Text(
+                      child: const Text(
                         "Next",
                         style: TextStyle(color: Colors.white),
                       )),

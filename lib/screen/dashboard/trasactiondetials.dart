@@ -16,8 +16,8 @@ class _trasanctionDetailsState extends State<trasanctionDetails> {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.white,
-        title: Padding(
-          padding: const EdgeInsets.only(right: 5, top: 20, left: 20),
+        title: const Padding(
+          padding: EdgeInsets.only(right: 5, top: 20, left: 20),
           child: Text(
             "Transaction Details",
             style: TextStyle(color: Colors.black, fontSize: 17),
@@ -36,7 +36,7 @@ class _trasanctionDetailsState extends State<trasanctionDetails> {
                     shape: BoxShape.circle,
                     color: Colors.white,
                     border: Border.all(color: Colors.grey.shade300)),
-                child: Icon(
+                child: const Icon(
                   Icons.arrow_back_ios_new_outlined,
                   color: Colors.black,
                   size: 20,
@@ -57,7 +57,7 @@ class _trasanctionDetailsState extends State<trasanctionDetails> {
                     shape: BoxShape.circle,
                     color: Colors.white,
                     border: Border.all(color: Colors.grey.shade300)),
-                child: Icon(
+                child: const Icon(
                   Icons.more_horiz,
                   color: Colors.black,
                   size: 20,
@@ -67,13 +67,13 @@ class _trasanctionDetailsState extends State<trasanctionDetails> {
       ),
       body: Column(
         children: [
-          SizedBox(
+          const SizedBox(
             height: 20,
           ),
           Container(
             // width: 200,
             height: 40,
-            decoration: BoxDecoration(
+            decoration: const BoxDecoration(
               color: Color(0xFF00AFB9),
               borderRadius: BorderRadius.all(
                 Radius.circular(0),
@@ -83,7 +83,7 @@ class _trasanctionDetailsState extends State<trasanctionDetails> {
             child: Padding(
               padding: const EdgeInsets.only(left: 20),
               child: Row(
-                children: [
+                children: const [
                   Text(
                     "Transaction Map",
                     style: TextStyle(
@@ -93,7 +93,7 @@ class _trasanctionDetailsState extends State<trasanctionDetails> {
               ),
             ),
           ),
-          SizedBox(
+          const SizedBox(
             height: 20,
           ),
           Container(
@@ -101,7 +101,7 @@ class _trasanctionDetailsState extends State<trasanctionDetails> {
             height: 140,
             decoration: BoxDecoration(
               border: Border.all(color: Colors.black),
-              borderRadius: BorderRadius.all(
+              borderRadius: const BorderRadius.all(
                 Radius.circular(20),
               ),
             ),
@@ -112,7 +112,7 @@ class _trasanctionDetailsState extends State<trasanctionDetails> {
               children: [
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
+                  children: const [
                     Text(
                       "Billing Address",
                       style: TextStyle(fontWeight: FontWeight.bold),
@@ -127,14 +127,14 @@ class _trasanctionDetailsState extends State<trasanctionDetails> {
                 Padding(
                   padding: const EdgeInsets.only(top: 10, bottom: 10),
                   child: Row(
-                    children: [
+                    children: const [
                       Text("Shipping Address"),
                     ],
                   ),
                 ),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
+                  children: const [
                     Text(
                       "IP Address",
                       style: TextStyle(fontWeight: FontWeight.bold),
@@ -152,7 +152,7 @@ class _trasanctionDetailsState extends State<trasanctionDetails> {
           Container(
               // width: 200,
               height: 40,
-              decoration: BoxDecoration(
+              decoration: const BoxDecoration(
                 color: Color(0xFF00AFB9),
                 borderRadius: BorderRadius.all(
                   Radius.circular(0),
@@ -162,7 +162,7 @@ class _trasanctionDetailsState extends State<trasanctionDetails> {
               child: Padding(
                 padding: const EdgeInsets.only(left: 20),
                 child: Row(
-                  children: [
+                  children: const [
                     Text(
                       "Transaction Map",
                       style: TextStyle(
@@ -177,7 +177,7 @@ class _trasanctionDetailsState extends State<trasanctionDetails> {
               children: [
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
+                  children: const [
                     Text(
                       "Date/Time",
                       style: TextStyle(fontWeight: FontWeight.bold),
@@ -188,12 +188,12 @@ class _trasanctionDetailsState extends State<trasanctionDetails> {
                             style: TextStyle(fontSize: 12))),
                   ],
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 10,
                 ),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
+                  children: const [
                     Text(
                       "Transaction ID",
                       style: TextStyle(fontWeight: FontWeight.bold),
@@ -204,12 +204,12 @@ class _trasanctionDetailsState extends State<trasanctionDetails> {
                             Text("_RTx4356JY", style: TextStyle(fontSize: 12))),
                   ],
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 10,
                 ),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
+                  children: const [
                     Text(
                       "User ID",
                       style: TextStyle(fontWeight: FontWeight.bold),
@@ -220,12 +220,12 @@ class _trasanctionDetailsState extends State<trasanctionDetails> {
                             Text("AS12345YT", style: TextStyle(fontSize: 12))),
                   ],
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 10,
                 ),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
+                  children: const [
                     Text(
                       "Amount",
                       style: TextStyle(fontWeight: FontWeight.bold),

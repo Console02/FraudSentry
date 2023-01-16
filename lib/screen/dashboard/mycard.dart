@@ -24,7 +24,7 @@ class _mycardinfoState extends State<mycardinfo> {
                 padding: const EdgeInsets.all(20.0),
                 child: Container(
                     padding: const EdgeInsets.all(20.0),
-                    decoration: BoxDecoration(
+                    decoration: const BoxDecoration(
                       borderRadius: BorderRadius.all(Radius.circular(15)),
                       color: Color(0xFF00AFB9),
                     ),
@@ -33,7 +33,7 @@ class _mycardinfoState extends State<mycardinfo> {
                       children: [
                         Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          children: [
+                          children: const [
                             Text(
                               "X-Card",
                               style: TextStyle(
@@ -50,26 +50,26 @@ class _mycardinfoState extends State<mycardinfo> {
                             ),
                           ],
                         ),
-                        SizedBox(
+                        const SizedBox(
                           height: 20,
                         ),
-                        Text(
+                        const Text(
                           "Balance",
                           style: TextStyle(color: Colors.white54, fontSize: 13),
                         ),
-                        SizedBox(
+                        const SizedBox(
                           height: 10,
                         ),
-                        Text(
+                        const Text(
                           "0.000,00",
                           style: TextStyle(color: Colors.white, fontSize: 20),
                         ),
-                        SizedBox(
+                        const SizedBox(
                           height: 20,
                         ),
                         Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          children: [
+                          children: const [
                             Text(
                               "****  **** 2468",
                               style: TextStyle(
@@ -89,7 +89,7 @@ class _mycardinfoState extends State<mycardinfo> {
                 padding: const EdgeInsets.all(20.0),
                 child: Container(
                     padding: const EdgeInsets.all(20.0),
-                    decoration: BoxDecoration(
+                    decoration: const BoxDecoration(
                       borderRadius: BorderRadius.all(Radius.circular(15)),
                       color: Color.fromRGBO(226, 91, 28, 1),
                     ),
@@ -98,7 +98,7 @@ class _mycardinfoState extends State<mycardinfo> {
                       children: [
                         Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          children: [
+                          children: const [
                             Text(
                               "X-Card",
                               style: TextStyle(
@@ -115,26 +115,26 @@ class _mycardinfoState extends State<mycardinfo> {
                             ),
                           ],
                         ),
-                        SizedBox(
+                        const SizedBox(
                           height: 20,
                         ),
-                        Text(
+                        const Text(
                           "Balance",
                           style: TextStyle(color: Colors.white54, fontSize: 13),
                         ),
-                        SizedBox(
+                        const SizedBox(
                           height: 10,
                         ),
-                        Text(
+                        const Text(
                           "0.000,00",
                           style: TextStyle(color: Colors.white, fontSize: 20),
                         ),
-                        SizedBox(
+                        const SizedBox(
                           height: 20,
                         ),
                         Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          children: [
+                          children: const [
                             Text(
                               "****  **** 2468",
                               style: TextStyle(
@@ -162,15 +162,15 @@ class _mycardinfoState extends State<mycardinfo> {
                     margin: const EdgeInsets.only(left: 20, right: 20, top: 20),
                     padding: const EdgeInsets.only(left: 90, top: 8, bottom: 8),
                     decoration: BoxDecoration(
-                      border: Border.all(color: Color(0xFF00AFB9)),
+                      border: Border.all(color: const Color(0xFF00AFB9)),
                       // color: Color(0xFF#3A3939),
-                      borderRadius: BorderRadius.all(
+                      borderRadius: const BorderRadius.all(
                         Radius.circular(15),
                       ),
                     ),
                     alignment: Alignment.center,
                     child: Row(
-                      children: [
+                      children: const [
                         Text(
                           "Add Card",
                           style: TextStyle(color: Color(0xFF00AFB9)),

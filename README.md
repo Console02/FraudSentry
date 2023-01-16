@@ -16,6 +16,5 @@ If you have any questions or need assistance getting started with FraudSentry, p
 Please note that FraudSentry is not responsible for any financial or legal consequences resulting from fraudulent activity. It is important to always comply with relevant laws and regulations regarding fraud detection and prevention.
 
 For help getting started with Flutter, view our
-[online documentation](https://Fraudsentry
-Com), which offers tutorials,
+[online documentation](https://Fraudsentry.com), which offers tutorials,
 samples, guidance on mobile development, and a full API reference.

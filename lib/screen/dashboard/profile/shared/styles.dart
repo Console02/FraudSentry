@@ -2,12 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:fraudsentry/screen/dashboard/profile/shared/colors.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-TextStyle kHeadingTitle = GoogleFonts.familjenGrotesk(
-  fontWeight: FontWeight.w600,
-  fontSize: 48,
-  height: 1.5,
-);
-
 TextStyle kHeadingSubTitle = GoogleFonts.montserrat(
   fontWeight: FontWeight.w300,
   fontSize: 12,

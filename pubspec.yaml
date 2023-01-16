@@ -38,12 +38,8 @@ dependencies:
   charts_flutter:
   syncfusion_flutter_charts:
   pie_chart:
-<<<<<<< HEAD
-  # dotted_border: ^1.0.7
-=======
   google_fonts: 
   flutter_svg: 
->>>>>>> 6badd21 (added profile UI components)
 
 dev_dependencies:
   flutter_test:
@@ -72,15 +68,12 @@ flutter:
    - assets/illustration.png
    - assets/Ellipse.png
    - assets/image 7.png
-<<<<<<< HEAD
    - assets/Group 162705.png
    - assets/Padlock.png
    - assets/Chatting.png
    - assets/Secure Shield.png
-=======
    - assets/icons/
    - assets/images/
->>>>>>> 6badd21 (added profile UI components)
 
 
 

@@ -2,6 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:fraudsentry/screen/auth/otppage.dart';
 import 'package:fraudsentry/screen/auth/signin.dart';
 
+final GlobalKey<FormState> formKey = GlobalKey<FormState>();
+final TextEditingController fullname = TextEditingController();
+final TextEditingController passwordd = TextEditingController();
+final TextEditingController emailadd = TextEditingController();
+
 class signuppage extends StatefulWidget {
   const signuppage({Key? key}) : super(key: key);
 
@@ -73,172 +78,153 @@ class _signuppageState extends State<signuppage> {
             const SizedBox(
               height: 50,
             ),
-            Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                const Text(
-                  "Full Name",
-                ),
-                const SizedBox(
-                  height: 15,
-                ),
-                Container(
-                  height: 45,
-                  decoration: BoxDecoration(
-                      border: Border.all(color: Colors.grey.shade300),
-                      color: Colors.grey.shade300,
-                      borderRadius:
-                          const BorderRadius.all(Radius.circular(20))),
-                  alignment: Alignment.center,
-                  child: TextFormField(
-                    // controller:
-                    //     fullnamecontroller,
-                    validator: (value) {
-                      if (value == null || value.isEmpty) {
-                        return 'FullName is required';
-                      }
-                      return null;
-                    },
-                    style: const TextStyle(color: Colors.black),
-                    decoration: const InputDecoration(
-                      filled: true,
-                      fillColor: Colors.white70,
-                      hintText: 'Enter your Name',
-                      hintStyle: TextStyle(fontSize: 11),
-                      border: OutlineInputBorder(
-                          borderRadius: BorderRadius.all(Radius.circular(10)),
-                          borderSide: BorderSide.none),
-                    ),
-                    onChanged: (value) {
-                      // inputfullname = value;
-                    },
+            Form(
+              key: formKey,
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  const Text(
+                    "Full Name",
                   ),
-                ),
-                const SizedBox(
-                  height: 15,
-                ),
-                const Text("Email Address"),
-                const SizedBox(
-                  height: 15,
-                ),
-                Container(
-                  height: 45,
-                  decoration: BoxDecoration(
-                      border: Border.all(color: Colors.grey.shade300),
-                      color: Colors.grey.shade300,
-                      borderRadius:
-                          const BorderRadius.all(Radius.circular(20))),
-                  alignment: Alignment.center,
-                  child: TextFormField(
-                    // controller:
-                    //     fullnamecontroller,
-                    validator: (value) {
-                      if (value == null || value.isEmpty) {
-                        return 'FullName is required';
-                      }
-                      return null;
-                    },
-                    style: const TextStyle(color: Colors.black),
-                    decoration: const InputDecoration(
-                      filled: true,
-                      fillColor: Colors.white70,
-                      hintText: 'Enter your Email Address',
-                      hintStyle: TextStyle(fontSize: 11),
-                      border: OutlineInputBorder(
-                          borderRadius: BorderRadius.all(Radius.circular(10)),
-                          borderSide: BorderSide.none),
-                    ),
-                    onChanged: (value) {
-                      // inputfullname = value;
-                    },
+                  const SizedBox(
+                    height: 15,
                   ),
-                ),
-                const SizedBox(
-                  height: 15,
-                ),
-                const Text("Password"),
-                const SizedBox(
-                  height: 15,
-                ),
-                Container(
-                  height: 45,
-                  decoration: BoxDecoration(
-                      border: Border.all(color: Colors.grey.shade300),
-                      color: Colors.grey.shade300,
-                      borderRadius:
-                          const BorderRadius.all(Radius.circular(20))),
-                  alignment: Alignment.center,
-                  child: TextFormField(
-                    // controller:
-                    //     fullnamecontroller,
-                    obscureText: passobsrtructionsignin,
-
-                    validator: (value) {
-                      if (value == null || value.isEmpty) {
-                        return 'FullName is required';
-                      }
-                      return null;
-                    },
-                    style: const TextStyle(color: Colors.black),
-                    decoration: InputDecoration(
-                      filled: true,
-                      fillColor: Colors.white70,
-                      hintText: 'Enter your Password',
-                      suffixIcon: InkWell(
-                        onTap: () {
-                          setState(() {
-                            passobsrtructionsignin = !passobsrtructionsignin;
-                          });
-                        },
-                        child: Icon(
-                          passobsrtructionsignin
-                              ? Icons.visibility_off
-                              : Icons.visibility,
-                          color: Colors.black,
-                        ),
+                  Container(
+                    height: 45,
+                    decoration: BoxDecoration(
+                        border: Border.all(color: Colors.grey.shade300),
+                        color: Colors.grey.shade300,
+                        borderRadius:
+                            const BorderRadius.all(Radius.circular(20))),
+                    alignment: Alignment.center,
+                    child: TextFormField(
+                      controller: fullname,
+                      validator: (value) {
+                        if (value == null || value.isEmpty) {
+                          return 'FullName is required';
+                        }
+                        return null;
+                      },
+                      style: const TextStyle(color: Colors.black),
+                      decoration: const InputDecoration(
+                        filled: true,
+                        fillColor: Colors.white70,
+                        hintText: 'Enter your Name',
+                        hintStyle: TextStyle(fontSize: 11),
+                        border: OutlineInputBorder(
+                            borderRadius: BorderRadius.all(Radius.circular(10)),
+                            borderSide: BorderSide.none),
                       ),
-                      hintStyle: const TextStyle(fontSize: 11),
-                      border: const OutlineInputBorder(
-                          borderRadius: BorderRadius.all(Radius.circular(10)),
-                          borderSide: BorderSide.none),
+                      onChanged: (value) {
+                        // inputfullname = value;
+                      },
                     ),
-                    onChanged: (value) {
-                      // inputfullname = value;
-                    },
                   ),
-                ),
-                const SizedBox(
-                  height: 50,
-                ),
-                InkWell(
-                  onTap: () {
-                    // if (formKey.currentState!
-                    //     .validate()) {
-                    //   // If the form is valid, display a snackbar. In the real world,
-                    //   // you'd often call a server or save the information in a database.
-                    //   // print(
-                    //   //     "reg validation sucessful");
-                    //   // email.clear();
-                    //   // password.clear();
-                    //   // fullnamecontroller.clear();
-                    //   // setState(() {
-                    //   //   EasyLoading.show(
-                    //   //     status:
-                    //   //         "Fetching your data",
-                    //   //   );
-                    //   });
-
-                    // phonenumbercontroller.clear();
-                    // }
-                    // formKey.currentState?.save();
-                  },
-                  child: InkWell(
+                  const SizedBox(
+                    height: 15,
+                  ),
+                  const Text("Email Address"),
+                  const SizedBox(
+                    height: 15,
+                  ),
+                  Container(
+                    height: 45,
+                    decoration: BoxDecoration(
+                        border: Border.all(color: Colors.grey.shade300),
+                        color: Colors.grey.shade300,
+                        borderRadius:
+                            const BorderRadius.all(Radius.circular(20))),
+                    alignment: Alignment.center,
+                    child: TextFormField(
+                      controller: emailadd,
+                      validator: (value) {
+                        if (value == null ||
+                            value.isEmpty ||
+                            !value.contains('@') ||
+                            !value.contains('.')) {
+                          return 'Invalid Email';
+                        }
+                        return null;
+                      },
+                      style: const TextStyle(color: Colors.black),
+                      decoration: const InputDecoration(
+                        filled: true,
+                        fillColor: Colors.white70,
+                        hintText: 'Enter your Email Address',
+                        hintStyle: TextStyle(fontSize: 11),
+                        border: OutlineInputBorder(
+                            borderRadius: BorderRadius.all(Radius.circular(10)),
+                            borderSide: BorderSide.none),
+                      ),
+                      onChanged: (value) {
+                        // inputfullname = value;
+                      },
+                    ),
+                  ),
+                  const SizedBox(
+                    height: 15,
+                  ),
+                  const Text("Password"),
+                  const SizedBox(
+                    height: 15,
+                  ),
+                  Container(
+                    height: 45,
+                    decoration: BoxDecoration(
+                        border: Border.all(color: Colors.grey.shade300),
+                        color: Colors.grey.shade300,
+                        borderRadius:
+                            const BorderRadius.all(Radius.circular(20))),
+                    alignment: Alignment.center,
+                    child: TextFormField(
+                      controller: passwordd,
+                      obscureText: passobsrtructionsignin,
+                      validator: (value) {
+                        if (value == null || value.isEmpty) {
+                          return 'password is required';
+                        }
+                        return null;
+                      },
+                      style: const TextStyle(color: Colors.black),
+                      decoration: InputDecoration(
+                        filled: true,
+                        fillColor: Colors.white70,
+                        hintText: 'Enter your Password',
+                        suffixIcon: InkWell(
+                          onTap: () {
+                            setState(() {
+                              passobsrtructionsignin = !passobsrtructionsignin;
+                            });
+                          },
+                          child: Icon(
+                            passobsrtructionsignin
+                                ? Icons.visibility_off
+                                : Icons.visibility,
+                            color: Colors.black,
+                          ),
+                        ),
+                        hintStyle: const TextStyle(fontSize: 11),
+                        border: const OutlineInputBorder(
+                            borderRadius: BorderRadius.all(Radius.circular(10)),
+                            borderSide: BorderSide.none),
+                      ),
+                      onChanged: (value) {
+                        // inputfullname = value;
+                      },
+                    ),
+                  ),
+                  const SizedBox(
+                    height: 50,
+                  ),
+                  InkWell(
                     onTap: () {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                            builder: (context) => const otppage()),
-                      );
+                      if (formKey.currentState!.validate()) {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => const otppage()),
+                        );
+                      }
                     },
                     child: Container(
                         // width: 200,
@@ -255,8 +241,8 @@ class _signuppageState extends State<signuppage> {
                           style: TextStyle(color: Colors.white),
                         )),
                   ),
-                ),
-              ],
+                ],
+              ),
             ),
             const SizedBox(
               height: 20,

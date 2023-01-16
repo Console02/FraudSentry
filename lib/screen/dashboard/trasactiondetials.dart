@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/src/foundation/key.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
+import 'package:google_maps_flutter/google_maps_flutter.dart';
 
 class trasanctionDetails extends StatefulWidget {
   const trasanctionDetails({Key? key}) : super(key: key);
@@ -11,6 +12,14 @@ class trasanctionDetails extends StatefulWidget {
 }
 
 class _trasanctionDetailsState extends State<trasanctionDetails> {
+  late GoogleMapController mapController;
+
+  final LatLng _center = const LatLng(45.521563, -122.677433);
+
+  void _onMapCreated(GoogleMapController controller) {
+    mapController = controller;
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -98,11 +107,20 @@ class _trasanctionDetailsState extends State<trasanctionDetails> {
           ),
           Container(
             width: 300,
-            height: 140,
+            height: 240,
             decoration: BoxDecoration(
-              border: Border.all(color: Colors.black),
+              // border: Border.all(color: Colors.grey),
               borderRadius: const BorderRadius.all(
                 Radius.circular(20),
+              ),
+            ),
+            child: SizedBox(
+              child: GoogleMap(
+                onMapCreated: _onMapCreated,
+                initialCameraPosition: CameraPosition(
+                  target: _center,
+                  zoom: 11.0,
+                ),
               ),
             ),
           ),

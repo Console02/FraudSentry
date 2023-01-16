@@ -1,7 +1,11 @@
+import 'dart:math';
+
 import 'package:flutter/material.dart';
 import 'package:flutter/src/foundation/key.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
+import 'package:charts_flutter/flutter.dart' as charts;
+import 'package:fraudsentry/screen/dashboard/salesclass.dart';
 
 class staticspage extends StatefulWidget {
   const staticspage({Key? key}) : super(key: key);
@@ -11,10 +15,61 @@ class staticspage extends StatefulWidget {
 }
 
 class _staticspageState extends State<staticspage> {
+  List<charts.Series<Sales, String>>? seriesList;
+  List<charts.Series<Sales, String>> _createRandomData() {
+    final random = Random();
+
+    final desktopSalesData = [
+      // Sales('JAN', random.nextInt(100)),
+      Sales('JAN', 600),
+      Sales('FEB', 400),
+      Sales('MAR', 200),
+      Sales('APR', 600),
+      Sales('MAY', 200),
+      Sales('JUN', 800),
+      Sales('JUL', 400),
+      Sales('AUG', 500),
+      Sales('SEP', 200),
+      Sales('OCT', 700),
+      Sales('NOV', 1000),
+      Sales('DEC', 300),
+    ];
+
+    return [
+      charts.Series<Sales, String>(
+        id: 'Sales',
+        domainFn: (Sales sales, _) => sales.year,
+        measureFn: (Sales sales, _) => sales.sales,
+        data: desktopSalesData,
+        fillColorFn: (Sales sales, _) {
+          return charts.MaterialPalette.green.shadeDefault;
+        },
+      )
+    ];
+  }
+
   bool controler1 = true;
   bool controler2 = false;
   bool controler3 = false;
   bool controler4 = false;
+  barChart() {
+    return charts.BarChart(
+      seriesList!,
+      animate: true,
+      vertical: true,
+      defaultRenderer: charts.BarRendererConfig(
+        groupingType: charts.BarGroupingType.grouped,
+        maxBarWidthPx: 4,
+      ),
+    );
+  }
+
+  @override
+  void initState() {
+    super.initState();
+    seriesList = _createRandomData();
+  }
+
   @override
   Widget build(BuildContext context) {
     return ListView(
@@ -50,6 +105,18 @@ class _staticspageState extends State<staticspage> {
                           fontSize: 20)),
                 ],
               ),
+              Container(
+                width: 370,
+                height: 200,
+                child: barChart(),
+              ),
+
+              // charts.BarChart(
+              //   seriesList,
+              //   animate: true,
+              //   vertical: false,
+              // ),
+
               // Column(children: [
               //   //Initialize the chart widget
               //   SfCartesianChart(
@@ -94,7 +161,7 @@ class _staticspageState extends State<staticspage> {
               //   )
               // ]),
               const SizedBox(
-                height: 30,
+                height: 80,
               ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,

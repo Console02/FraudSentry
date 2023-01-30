@@ -84,24 +84,29 @@ class _anylyticsstartState extends State<anylyticsstart> {
           const SizedBox(
             height: 40,
           ),
-          PieChart(
-            dataMap: dataMap,
-            chartType: ChartType.ring,
-            chartRadius: MediaQuery.of(context).size.width / 1.9,
-            legendOptions: const LegendOptions(
-              showLegendsInRow: false,
-              legendPosition: LegendPosition.right,
-              showLegends: true,
-              legendShape: BoxShape.rectangle,
-              legendTextStyle: TextStyle(
-                fontWeight: FontWeight.bold,
+          Center(
+            child: Container(
+              width: 320,
+              child: PieChart(
+                dataMap: dataMap,
+                chartType: ChartType.ring,
+                chartRadius: MediaQuery.of(context).size.width / 1.9,
+                legendOptions: LegendOptions(
+                  showLegendsInRow: false,
+                  legendPosition: LegendPosition.right,
+                  showLegends: true,
+                  legendShape: BoxShape.rectangle,
+                  legendTextStyle: TextStyle(
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+                chartValuesOptions: ChartValuesOptions(
+                  showChartValueBackground: false,
+                  showChartValues: false,
+                  showChartValuesInPercentage: false,
+                  showChartValuesOutside: false,
+                ),
               ),
-            ),
-            chartValuesOptions: const ChartValuesOptions(
-              showChartValueBackground: false,
-              showChartValues: false,
-              showChartValuesInPercentage: false,
-              showChartValuesOutside: false,
             ),
           ),
           const SizedBox(

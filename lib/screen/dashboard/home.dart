@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:fraudsentry/screen/dashboard/addnewcard.dart';
 import 'package:fraudsentry/screen/dashboard/monitoring.dart';
+import 'package:fraudsentry/screen/dashboard/profile/user_profile.dart';
 import 'package:fraudsentry/screen/dashboard/statanltics.dart';
 import 'package:fraudsentry/screen/dashboard/trasactiondetials.dart';
 
@@ -104,49 +105,60 @@ class _homepageState extends State<homepage> {
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  Container(
-                    width: 155,
-                    height: 130,
-                    decoration: BoxDecoration(
-                      borderRadius: const BorderRadius.all(Radius.circular(15)),
-                      boxShadow: [
-                        BoxShadow(
-                          color: Colors.grey.withOpacity(0.2),
-                          spreadRadius: 5,
-                          blurRadius: 7,
-                          offset:
-                              const Offset(0, 3), // changes position of shadow
-                        ),
-                      ],
-                      color: Colors.white,
-                    ),
-                    alignment: Alignment.center,
-                    child: Padding(
-                      padding: const EdgeInsets.all(20.0),
-                      child: Column(
-                        children: [
-                          Container(
-                              padding: const EdgeInsets.all(5),
-                              decoration: BoxDecoration(
-                                borderRadius:
-                                    const BorderRadius.all(Radius.circular(5)),
-                                color: Colors.grey.shade200,
-                              ),
-                              child: const Icon(Icons.person)),
-                          const SizedBox(
-                            height: 15,
-                          ),
-                          const Text("Profile",
-                              style: TextStyle(
-                                  fontWeight: FontWeight.bold, fontSize: 13)),
-                          const SizedBox(
-                            height: 10,
-                          ),
-                          const Text(
-                            "Lorem ipsum",
-                            style: TextStyle(color: Colors.grey, fontSize: 10),
+                  InkWell(
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => const UserProfile()),
+                      );
+                    },
+                    child: Container(
+                      width: 155,
+                      height: 130,
+                      decoration: BoxDecoration(
+                        borderRadius:
+                            const BorderRadius.all(Radius.circular(15)),
+                        boxShadow: [
+                          BoxShadow(
+                            color: Colors.grey.withOpacity(0.2),
+                            spreadRadius: 5,
+                            blurRadius: 7,
+                            offset: const Offset(
+                                0, 3), // changes position of shadow
                           ),
                         ],
+                        color: Colors.white,
+                      ),
+                      alignment: Alignment.center,
+                      child: Padding(
+                        padding: const EdgeInsets.all(20.0),
+                        child: Column(
+                          children: [
+                            Container(
+                                padding: const EdgeInsets.all(5),
+                                decoration: BoxDecoration(
+                                  borderRadius: const BorderRadius.all(
+                                      Radius.circular(5)),
+                                  color: Colors.grey.shade200,
+                                ),
+                                child: const Icon(Icons.person)),
+                            const SizedBox(
+                              height: 15,
+                            ),
+                            const Text("Profile",
+                                style: TextStyle(
+                                    fontWeight: FontWeight.bold, fontSize: 13)),
+                            const SizedBox(
+                              height: 10,
+                            ),
+                            const Text(
+                              "Lorem ipsum",
+                              style:
+                                  TextStyle(color: Colors.grey, fontSize: 10),
+                            ),
+                          ],
+                        ),
                       ),
                     ),
                   ),

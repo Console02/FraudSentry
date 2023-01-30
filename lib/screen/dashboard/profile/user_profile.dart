@@ -47,6 +47,15 @@ class _UserProfileState extends State<UserProfile> {
               fontWeight: FontWeight.w600,
             ),
           ),
+          leading: InkWell(
+            onTap: () {
+              Navigator.pop(context);
+            },
+            child: Icon(
+              Icons.arrow_back,
+              color: Colors.black,
+            ),
+          ),
           centerTitle: true,
           backgroundColor: Colors.white,
           shadowColor: Colors.transparent,

@@ -8,8 +8,9 @@ import 'package:fraudsentry/screen/dashboard/home.dart';
 import 'package:fraudsentry/screen/dashboard/mycard.dart';
 import 'package:fraudsentry/screen/dashboard/profile/user_profile.dart';
 import 'package:fraudsentry/screen/dashboard/statics.dart';
-// import 'package:syncfusion_flutter_charts/charts.dart';
-// import 'package:syncfusion_flutter_charts/sparkcharts.dart';
+import 'package:shared_preferences/shared_preferences.dart';
+import 'package:syncfusion_flutter_charts/charts.dart';
+import 'package:syncfusion_flutter_charts/sparkcharts.dart';
 
 int _selectedIndex = 0;
 String itempage = "Dashboard";
@@ -71,6 +72,22 @@ class _mainDashboardState extends State<mainDashboard> {
 
   Widget addaccountnavigationWidget() {
     return const addaccount();
+  }
+
+  Future<void> init() async {
+    SharedPreferences prefs = await SharedPreferences.getInstance();
+    String? currentDashState = prefs.getString('currentDashState');
+    int? currentIndexValue = prefs.getInt('currentIndexValue');
+    setState(() {
+      itempage = currentDashState ?? "";
+      _selectedIndex = currentIndexValue ?? 0;
+    });
+  }
+
+  @override
+  void initState() {
+    init();
+    super.initState();
   }
 
   @override

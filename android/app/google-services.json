@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "497336827774",
+    "project_id": "fraudsentry",
+    "storage_bucket": "fraudsentry.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:497336827774:android:cf8bde54b5b01f4621bd2f",
+        "android_client_info": {
+          "package_name": "com.fraudsentry.fraudsentry_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "497336827774-gblneopvifj5frlbvjfo591isl4matcf.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB5XwXpE3n4CHMgnMZ9TeqaXVRrXbpO4hM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "497336827774-gblneopvifj5frlbvjfo591isl4matcf.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,3 +1,4 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:fraudsentry/screen/dashboard/profile/change_password/change_password.dart';
 import 'package:fraudsentry/screen/dashboard/profile/edit_profile/edit_profile.dart';
@@ -13,6 +14,7 @@ import 'package:fraudsentry/screen/dashboard/profile/widgets/profile_details.dar
 import 'package:fraudsentry/screen/dashboard/profile/widgets/profile_section.dart';
 import 'package:fraudsentry/screen/dashboard/profile/widgets/section_content.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 class UserProfile extends StatefulWidget {
   const UserProfile({Key? key}) : super(key: key);
@@ -24,6 +26,11 @@ class UserProfile extends StatefulWidget {
 class _UserProfileState extends State<UserProfile> {
   bool faceIdOn = false;
   bool fingerPrintOn = false;
+
+  Future signOut() async {
+    await FirebaseAuth.instance.signOut();
+  }
+
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -215,7 +222,13 @@ class _UserProfileState extends State<UserProfile> {
                 ],
               ),
               TextButton(
-                onPressed: () {},
+                onPressed: () async {
+                  SharedPreferences prefs =
+                      await SharedPreferences.getInstance();
+                  await prefs.setString('currentDashState', "Home");
+                  await prefs.setInt('currentIndexValue', 0);
+                  await signOut();
+                },
                 child: Text(
                   "Logout",
                   style: GoogleFonts.montserrat(

@@ -58,6 +58,7 @@ class _mainDashboardState extends State<mainDashboard> {
     _SalesData('Apr', 32),
     _SalesData('May', 40)
   ];
+
   Widget homenavigationWidget() {
     return const homepage();
   }
@@ -247,16 +248,16 @@ class _mainDashboardState extends State<mainDashboard> {
                             padding: const EdgeInsets.only(top: 20),
                             child: Column(
                               crossAxisAlignment: CrossAxisAlignment.start,
-                              children: [
-                                const Text(
+                              children: const [
+                                Text(
                                   "Welcome back",
                                   style: TextStyle(
                                       color: Colors.grey, fontSize: 10),
                                 ),
-                                const SizedBox(
+                                SizedBox(
                                   height: 3,
                                 ),
-                                const Text(
+                                Text(
                                   "Sophia Calzoni",
                                   style: TextStyle(
                                       color: Colors.black, fontSize: 13),
@@ -307,7 +308,6 @@ class _mainDashboardState extends State<mainDashboard> {
           ? statisticnavigationWidget()
           : itempage == "fbutton"
               ? addaccountnavigationWidget()
-              // addnewcardnavigationWidget()
               : itempage == "My card"
                   ? mycardnavigationWidget()
                   : itempage == "fbutton"
@@ -349,15 +349,11 @@ class _mainDashboardState extends State<mainDashboard> {
             label: 'Profile',
           ),
         ],
-
         currentIndex: _selectedIndex,
         selectedItemColor: Colors.amber[800],
         onTap: _onItemTapped,
         type: BottomNavigationBarType.fixed,
-        // selectedItemColor: const Color(0xff6200ee),
-        // unselectedItemColor: const Color(0xff757575),
       ),
-      // floatingActionButton: _buildFloatingActionButton(),
     );
   }
 }

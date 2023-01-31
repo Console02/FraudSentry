@@ -43,6 +43,7 @@ dependencies:
   cloud_firestore: 
   firebase_auth: 
   shared_preferences: 
+  email_otp: 
   
   google_maps_flutter:
 

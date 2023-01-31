@@ -1,10 +1,13 @@
+import 'package:email_otp/email_otp.dart';
 import 'package:flutter/material.dart';
+import 'package:fraudsentry/utils.dart';
 import 'package:fraudsentry/screen/auth/signin.dart';
 import 'package:otp_text_field/otp_text_field.dart';
 import 'package:otp_text_field/style.dart';
 
 class otppage extends StatefulWidget {
-  const otppage({Key? key}) : super(key: key);
+  EmailOTP? myAuth;
+  otppage({Key? key, this.myAuth}) : super(key: key);
 
   @override
   State<otppage> createState() => _otppageState();
@@ -162,8 +165,14 @@ class _otppageState extends State<otppage> {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   InkWell(
-                    onTap: () {
-                      sucessdialogbox();
+                    onTap: () async {
+                      var res = await widget.myAuth!
+                          .verifyOTP(otp: otpController.toString());
+                      if (res) {
+                        sucessdialogbox();
+                      } else {
+                        Utils().showSnackbar("Error verifying code, try again");
+                      }
                     },
                     child: Container(
                         // width: 200,

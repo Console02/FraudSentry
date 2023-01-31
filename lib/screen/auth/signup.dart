@@ -1,6 +1,11 @@
+import 'package:email_otp/email_otp.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import 'package:fraudsentry/main.dart';
 import 'package:fraudsentry/screen/auth/otppage.dart';
 import 'package:fraudsentry/screen/auth/signin.dart';
+import 'package:fraudsentry/screen/dash.dart';
+import 'package:fraudsentry/utils.dart';
 
 final GlobalKey<FormState> formKey = GlobalKey<FormState>();
 final TextEditingController fullname = TextEditingController();
@@ -16,6 +21,46 @@ class signuppage extends StatefulWidget {
 
 class _signuppageState extends State<signuppage> {
   bool passobsrtructionsignin = true;
+  final TextEditingController _emailController = TextEditingController();
+  final TextEditingController _passwordController = TextEditingController();
+  GlobalKey<FormState> _formKey = GlobalKey();
+  EmailOTP myauth = EmailOTP();
+
+  sendOtp(String email) async {
+    myauth.setConfig(
+        appName: "Email OTP",
+        userEmail: email,
+        otpLength: 4,
+        otpType: OTPType.digitsOnly);
+    await myauth.sendOTP();
+  }
+
+  Future signUp() async {
+    showDialog(
+      barrierDismissible: false,
+      context: context,
+      builder: (context) => const Center(
+        child: CircularProgressIndicator(
+          color: Color(0xFF00AFB9),
+        ),
+      ),
+    );
+
+    try {
+      await FirebaseAuth.instance.createUserWithEmailAndPassword(
+          email: _emailController.text.trim(),
+          password: _passwordController.text.trim());
+      // .whenComplete(
+      //   () => sendOtp(
+      //     _emailController.text.trim(),
+      //   ),
+      // );
+    } on FirebaseAuthException catch (e) {
+      Utils().showSnackbar(e.message);
+    }
+
+    navigatorKey.currentState!.popUntil((route) => route.isFirst);
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -79,7 +124,8 @@ class _signuppageState extends State<signuppage> {
               height: 50,
             ),
             Form(
-              key: formKey,
+              key: _formKey,
+
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
@@ -98,7 +144,9 @@ class _signuppageState extends State<signuppage> {
                             const BorderRadius.all(Radius.circular(20))),
                     alignment: Alignment.center,
                     child: TextFormField(
-                      controller: fullname,
+                      // controller:
+                      //     fullnamecontroller,
+
                       validator: (value) {
                         if (value == null || value.isEmpty) {
                           return 'FullName is required';
@@ -136,13 +184,11 @@ class _signuppageState extends State<signuppage> {
                             const BorderRadius.all(Radius.circular(20))),
                     alignment: Alignment.center,
                     child: TextFormField(
-                      controller: emailadd,
+                      controller: _emailController,
                       validator: (value) {
-                        if (value == null ||
-                            value.isEmpty ||
-                            !value.contains('@') ||
-                            !value.contains('.')) {
-                          return 'Invalid Email';
+                        if (value == null || value.isEmpty) {
+                          return 'FullName is required';
+
                         }
                         return null;
                       },
@@ -177,11 +223,12 @@ class _signuppageState extends State<signuppage> {
                             const BorderRadius.all(Radius.circular(20))),
                     alignment: Alignment.center,
                     child: TextFormField(
-                      controller: passwordd,
+                      controller: _passwordController,
                       obscureText: passobsrtructionsignin,
                       validator: (value) {
                         if (value == null || value.isEmpty) {
-                          return 'password is required';
+                          return 'Password is required';
+
                         }
                         return null;
                       },
@@ -217,12 +264,16 @@ class _signuppageState extends State<signuppage> {
                     height: 50,
                   ),
                   InkWell(
-                    onTap: () {
-                      if (formKey.currentState!.validate()) {
+                    onTap: () async {
+                      if (_formKey.currentState!.validate()) {
+                        _formKey.currentState!.save();
+                        await signUp();
                         Navigator.push(
                           context,
                           MaterialPageRoute(
-                              builder: (context) => const otppage()),
+                            builder: (context) => const mainDashboard(),
+                          ),
+
                         );
                       }
                     },

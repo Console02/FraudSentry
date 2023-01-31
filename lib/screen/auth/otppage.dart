@@ -1,6 +1,7 @@
 import 'package:email_otp/email_otp.dart';
 import 'package:flutter/material.dart';
 import 'package:fraudsentry/utils.dart';
+import 'package:fraudsentry/screen/auth/signin.dart';
 import 'package:otp_text_field/otp_text_field.dart';
 import 'package:otp_text_field/style.dart';
 
@@ -52,20 +53,29 @@ class _otppageState extends State<otppage> {
                         const SizedBox(
                           height: 20,
                         ),
-                        Container(
-                            width: 200,
-                            height: 45,
-                            decoration: const BoxDecoration(
-                              color: Color(0xFF00AFB9),
-                              borderRadius: BorderRadius.all(
-                                Radius.circular(5),
+                        InkWell(
+                          onTap: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => const signinpage()),
+                            );
+                          },
+                          child: Container(
+                              width: 200,
+                              height: 45,
+                              decoration: const BoxDecoration(
+                                color: Color(0xFF00AFB9),
+                                borderRadius: BorderRadius.all(
+                                  Radius.circular(5),
+                                ),
                               ),
-                            ),
-                            alignment: Alignment.center,
-                            child: const Text(
-                              "Agree and continue",
-                              style: TextStyle(color: Colors.white),
-                            )),
+                              alignment: Alignment.center,
+                              child: const Text(
+                                "Agree and continue",
+                                style: TextStyle(color: Colors.white),
+                              )),
+                        ),
                         SizedBox(
                           width: 270,
                           child: Row(

@@ -1,3 +1,5 @@
+import 'dart:convert';
+
 import 'dart:ui';
 
 import 'package:firebase_auth/firebase_auth.dart';
@@ -7,6 +9,13 @@ import 'package:fraudsentry/screen/auth/passwordreset/forgetpassword.dart';
 import 'package:fraudsentry/screen/auth/signup.dart';
 import 'package:fraudsentry/screen/dash.dart';
 import 'package:fraudsentry/utils.dart';
+
+import 'package:http/http.dart' as http;
+
+final GlobalKey<FormState> formKey = GlobalKey<FormState>();
+final TextEditingController emailaddress = TextEditingController();
+final TextEditingController password = TextEditingController();
+
 
 class signinpage extends StatefulWidget {
   const signinpage({Key? key}) : super(key: key);
@@ -51,6 +60,23 @@ class _signinpageState extends State<signinpage> {
     _passwordController.dispose();
 
     super.dispose();
+
+
+  Future? registeruser() async {
+    final apiUrl = Uri.parse("https://fraudsentry.cyclic.app/signup");
+    final response = await http.post(apiUrl,
+        body: jsonEncode(
+          <String, dynamic>{
+            "fullName": "muyiwa eduardo",
+            "email": "Lydiaerfc@gmail.com",
+            "password": "edaurdo",
+
+            // "lastname": "dedv"
+          },
+        ));
+    print("siungup code ${response.statusCode}");
+    print(response.body);
+
   }
 
   @override

@@ -3,6 +3,10 @@
    <application
         android:label="fraudsentry"
         android:icon="@mipmap/ic_launcher">
+
+        <meta-data android:name="com.google.android.geo.API_KEY"
+               android:value="AIzaSyCr3KCm3js-yqi5_DbgwoCAzsq8NaSZaO4"/>
+
         <activity
             android:name=".MainActivity"
             android:launchMode="singleTop"

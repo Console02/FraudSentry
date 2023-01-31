@@ -7,6 +7,11 @@ import 'package:fraudsentry/screen/auth/signin.dart';
 import 'package:fraudsentry/screen/dash.dart';
 import 'package:fraudsentry/utils.dart';
 
+final GlobalKey<FormState> formKey = GlobalKey<FormState>();
+final TextEditingController fullname = TextEditingController();
+final TextEditingController passwordd = TextEditingController();
+final TextEditingController emailadd = TextEditingController();
+
 class signuppage extends StatefulWidget {
   const signuppage({Key? key}) : super(key: key);
 
@@ -120,6 +125,7 @@ class _signuppageState extends State<signuppage> {
             ),
             Form(
               key: _formKey,
+
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
@@ -140,6 +146,7 @@ class _signuppageState extends State<signuppage> {
                     child: TextFormField(
                       // controller:
                       //     fullnamecontroller,
+
                       validator: (value) {
                         if (value == null || value.isEmpty) {
                           return 'FullName is required';
@@ -181,6 +188,7 @@ class _signuppageState extends State<signuppage> {
                       validator: (value) {
                         if (value == null || value.isEmpty) {
                           return 'FullName is required';
+
                         }
                         return null;
                       },
@@ -220,6 +228,7 @@ class _signuppageState extends State<signuppage> {
                       validator: (value) {
                         if (value == null || value.isEmpty) {
                           return 'Password is required';
+
                         }
                         return null;
                       },
@@ -264,6 +273,7 @@ class _signuppageState extends State<signuppage> {
                           MaterialPageRoute(
                             builder: (context) => const mainDashboard(),
                           ),
+
                         );
                       }
                     },

@@ -79,7 +79,7 @@ flutter:
    - assets/Chatting.png
    - assets/Secure Shield.png
    - assets/icons/
-  #  - assets/images/
+   - assets/images/
 
 
 

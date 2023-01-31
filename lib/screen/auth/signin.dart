@@ -16,7 +16,6 @@ final GlobalKey<FormState> formKey = GlobalKey<FormState>();
 final TextEditingController emailaddress = TextEditingController();
 final TextEditingController password = TextEditingController();
 
-
 class signinpage extends StatefulWidget {
   const signinpage({Key? key}) : super(key: key);
 
@@ -60,7 +59,7 @@ class _signinpageState extends State<signinpage> {
     _passwordController.dispose();
 
     super.dispose();
-
+  }
 
   Future? registeruser() async {
     final apiUrl = Uri.parse("https://fraudsentry.cyclic.app/signup");
@@ -76,7 +75,6 @@ class _signinpageState extends State<signinpage> {
         ));
     print("siungup code ${response.statusCode}");
     print(response.body);
-
   }
 
   @override

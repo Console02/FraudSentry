@@ -44,6 +44,7 @@ dependencies:
   cloud_firestore: 
   firebase_auth: 
   shared_preferences: 
+  email_otp: 
   
 
 dev_dependencies:

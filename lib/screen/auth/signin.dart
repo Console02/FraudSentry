@@ -2,9 +2,11 @@ import 'dart:ui';
 
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import 'package:fraudsentry/main.dart';
 import 'package:fraudsentry/screen/auth/passwordreset/forgetpassword.dart';
 import 'package:fraudsentry/screen/auth/signup.dart';
 import 'package:fraudsentry/screen/dash.dart';
+import 'package:fraudsentry/utils.dart';
 
 class signinpage extends StatefulWidget {
   const signinpage({Key? key}) : super(key: key);
@@ -21,11 +23,26 @@ class _signinpageState extends State<signinpage> {
   GlobalKey<FormState> _formKey = GlobalKey();
 
   Future signIn() async {
-    print(_emailController.text);
-    print(_passwordController.text.trim());
-    await FirebaseAuth.instance.signInWithEmailAndPassword(
-        email: _emailController.text.trim(),
-        password: _passwordController.text.trim());
+    showDialog(
+      barrierDismissible: false,
+      context: context,
+      builder: (context) => const Center(
+        child: CircularProgressIndicator(
+          color: Color(0xFF00AFB9),
+        ),
+      ),
+    );
+
+    try {
+      await FirebaseAuth.instance.signInWithEmailAndPassword(
+          email: _emailController.text.trim(),
+          password: _passwordController.text.trim());
+    } on FirebaseAuthException catch (e) {
+      print(e.message);
+      Utils().showSnackbar(e.message);
+    }
+
+    navigatorKey.currentState!.popUntil((route) => route.isFirst);
   }
 
   @override

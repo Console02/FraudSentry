@@ -153,7 +153,7 @@ class _homepageState extends State<homepage> {
                               height: 10,
                             ),
                             const Text(
-                              "Lorem ipsum",
+                              "Users name",
                               style:
                                   TextStyle(color: Colors.grey, fontSize: 10),
                             ),
@@ -210,7 +210,7 @@ class _homepageState extends State<homepage> {
                               height: 10,
                             ),
                             const Text(
-                              "Lorem ipsum",
+                              " Last Transaction ID ",
                               style:
                                   TextStyle(color: Colors.grey, fontSize: 10),
                             ),
@@ -276,7 +276,7 @@ class _homepageState extends State<homepage> {
                               height: 10,
                             ),
                             const Text(
-                              "Lorem ipsum",
+                              "(Accepted)",
                               style:
                                   TextStyle(color: Colors.grey, fontSize: 10),
                             ),
@@ -333,7 +333,7 @@ class _homepageState extends State<homepage> {
                                 height: 10,
                               ),
                               const Text(
-                                "Lorem ipsum",
+                                "Status",
                                 style:
                                     TextStyle(color: Colors.grey, fontSize: 10),
                               ),

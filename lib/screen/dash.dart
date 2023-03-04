@@ -9,8 +9,8 @@ import 'package:fraudsentry/screen/dashboard/mycard.dart';
 import 'package:fraudsentry/screen/dashboard/profile/user_profile.dart';
 import 'package:fraudsentry/screen/dashboard/statics.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-import 'package:syncfusion_flutter_charts/charts.dart';
-import 'package:syncfusion_flutter_charts/sparkcharts.dart';
+// import 'package:syncfusion_flutter_charts/charts.dart';
+// import 'package:syncfusion_flutter_charts/sparkcharts.dart';
 
 int _selectedIndex = 0;
 String itempage = "Dashboard";

@@ -44,6 +44,7 @@ dependencies:
   firebase_auth: 
   shared_preferences: 
   email_otp: 
+  font_awesome_flutter:
   
   google_maps_flutter:
 
@@ -79,7 +80,7 @@ flutter:
    - assets/Chatting.png
    - assets/Secure Shield.png
    - assets/icons/
-  #  - assets/images/
+   - assets/images/
 
 
 

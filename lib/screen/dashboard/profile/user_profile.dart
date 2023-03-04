@@ -2,6 +2,7 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:fraudsentry/screen/dashboard/profile/change_password/change_password.dart';
 import 'package:fraudsentry/screen/dashboard/profile/edit_profile/edit_profile.dart';
+import 'package:fraudsentry/screen/dashboard/profile/faQ/faq_page.dart';
 import 'package:fraudsentry/screen/dashboard/profile/face_id/face_id.dart';
 import 'package:fraudsentry/screen/dashboard/profile/fngerprint/finger_print.dart';
 import 'package:fraudsentry/screen/dashboard/profile/forgot_password/forgot_password.dart';
@@ -212,6 +213,18 @@ class _UserProfileState extends State<UserProfile> {
                         context,
                         MaterialPageRoute(
                           builder: (context) => const Languages(),
+                        ),
+                      );
+                    },
+                  ),
+                  SectionContent(
+                    sectionName: "FAQ",
+                    sectionLeading: const Icon(Icons.question_mark),
+                    onSectionTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => const faqpage(),
                         ),
                       );
                     },

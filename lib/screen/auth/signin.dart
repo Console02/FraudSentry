@@ -4,6 +4,7 @@ import 'dart:ui';
 
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:fraudsentry/main.dart';
 import 'package:fraudsentry/screen/auth/passwordreset/forgetpassword.dart';
 import 'package:fraudsentry/screen/auth/signup.dart';
@@ -103,9 +104,9 @@ class _signinpageState extends State<signinpage> {
                 children: [
                   Row(
                     children: const [
-                      Text("Hi,Welcome Back!",
+                      Text("Welcome back to FraudSentry!",
                           style: TextStyle(
-                              fontWeight: FontWeight.bold, fontSize: 20)),
+                              fontWeight: FontWeight.bold, fontSize: 18)),
                       SizedBox(
                         width: 5,
                       ),
@@ -120,7 +121,7 @@ class _signinpageState extends State<signinpage> {
                     height: 10,
                   ),
                   const Text(
-                    "Lorem ipsum dolor sit amet, consectetur",
+                    "Please enter your login credentials to access your account.The OAuth sign-in options should have Gmail, Facebook, and Twitter.",
                     style: TextStyle(color: Colors.grey),
                   ),
                 ],
@@ -348,32 +349,38 @@ class _signinpageState extends State<signinpage> {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Container(
-                      width: 40.0,
-                      height: 40.0,
-                      decoration: BoxDecoration(
-                          shape: BoxShape.circle,
-                          color: Colors.grey.shade200,
-                          border: Border.all(color: Colors.grey.shade300)),
-                      child: const Icon(
-                        Icons.facebook,
-                        color: Colors.green,
+                    width: 40.0,
+                    height: 40.0,
+                    decoration: BoxDecoration(
+                        shape: BoxShape.circle,
+                        color: Colors.grey.shade200,
+                        border: Border.all(color: Colors.grey.shade300)),
+                    child: Center(
+                      child: FaIcon(
+                        FontAwesomeIcons.google,
+                        color: Colors.yellow.shade600,
                         size: 30,
-                      )),
+                      ),
+                    ),
+                  ),
                   const SizedBox(
                     width: 20,
                   ),
                   Container(
-                      width: 40.0,
-                      height: 40.0,
-                      decoration: BoxDecoration(
-                          shape: BoxShape.circle,
-                          color: Colors.grey.shade200,
-                          border: Border.all(color: Colors.grey.shade300)),
-                      child: const Icon(
-                        Icons.facebook,
+                    width: 40.0,
+                    height: 40.0,
+                    decoration: BoxDecoration(
+                        shape: BoxShape.circle,
+                        color: Colors.grey.shade200,
+                        border: Border.all(color: Colors.grey.shade300)),
+                    child: Center(
+                      child: FaIcon(
+                        FontAwesomeIcons.apple,
                         color: Colors.black,
                         size: 30,
-                      )),
+                      ),
+                    ),
+                  ),
                   const SizedBox(
                     width: 20,
                   ),

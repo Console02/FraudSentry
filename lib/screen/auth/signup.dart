@@ -1,11 +1,15 @@
+import 'dart:convert';
+
 import 'package:email_otp/email_otp.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:fraudsentry/main.dart';
 import 'package:fraudsentry/screen/auth/otppage.dart';
 import 'package:fraudsentry/screen/auth/signin.dart';
 import 'package:fraudsentry/screen/dash.dart';
 import 'package:fraudsentry/utils.dart';
+import 'package:http/http.dart' as http;
 
 final GlobalKey<FormState> formKey = GlobalKey<FormState>();
 final TextEditingController fullname = TextEditingController();
@@ -23,6 +27,8 @@ class _signuppageState extends State<signuppage> {
   bool passobsrtructionsignin = true;
   final TextEditingController _emailController = TextEditingController();
   final TextEditingController _passwordController = TextEditingController();
+  final TextEditingController _fullnamecontroller = TextEditingController();
+
   GlobalKey<FormState> _formKey = GlobalKey();
   EmailOTP myauth = EmailOTP();
 
@@ -60,6 +66,47 @@ class _signuppageState extends State<signuppage> {
     }
 
     navigatorKey.currentState!.popUntil((route) => route.isFirst);
+  }
+
+  creatuser() async {
+    final apiUrl = Uri.parse(
+        "https://5eupjkfsdk.execute-api.eu-west-1.amazonaws.com/dev/registration/registration");
+    final response = await http.post(
+      apiUrl,
+      // headers: {
+      //   "Accept": "application/json",
+      //   "Authorization": token.toString(),
+      // },
+      body: jsonEncode(
+        <String, dynamic>{
+          "email": _emailController.text.trim(),
+          "first_name": _fullnamecontroller,
+          "last_name": "dssssww",
+          "phone_number": "+23487881361094",
+          "password":
+              base64.encode(utf8.encode(_passwordController.text.trim()))
+        },
+      ),
+    );
+    print(response.body);
+    print(response.statusCode);
+    switch (response.statusCode) {
+      case 200:
+        break;
+      case 202:
+        break;
+      case 504:
+        break;
+      case 400:
+        print("user already exist");
+        break;
+      case 403:
+        break;
+      case 500:
+        break;
+      default:
+        print("unknown error occurred");
+    }
   }
 
   @override
@@ -115,7 +162,7 @@ class _signuppageState extends State<signuppage> {
                   height: 10,
                 ),
                 Text(
-                  "Lorem ipsum dolor sit amet, consectetur",
+                  "We're excited to help you protect your account from fraud.",
                   style: TextStyle(color: Colors.grey),
                 ),
               ],
@@ -125,7 +172,6 @@ class _signuppageState extends State<signuppage> {
             ),
             Form(
               key: _formKey,
-
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
@@ -144,9 +190,7 @@ class _signuppageState extends State<signuppage> {
                             const BorderRadius.all(Radius.circular(20))),
                     alignment: Alignment.center,
                     child: TextFormField(
-                      // controller:
-                      //     fullnamecontroller,
-
+                      controller: _fullnamecontroller,
                       validator: (value) {
                         if (value == null || value.isEmpty) {
                           return 'FullName is required';
@@ -188,7 +232,6 @@ class _signuppageState extends State<signuppage> {
                       validator: (value) {
                         if (value == null || value.isEmpty) {
                           return 'FullName is required';
-
                         }
                         return null;
                       },
@@ -228,7 +271,6 @@ class _signuppageState extends State<signuppage> {
                       validator: (value) {
                         if (value == null || value.isEmpty) {
                           return 'Password is required';
-
                         }
                         return null;
                       },
@@ -265,17 +307,20 @@ class _signuppageState extends State<signuppage> {
                   ),
                   InkWell(
                     onTap: () async {
-                      if (_formKey.currentState!.validate()) {
-                        _formKey.currentState!.save();
-                        await signUp();
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                            builder: (context) => const mainDashboard(),
-                          ),
-
-                        );
-                      }
+                      print(
+                        _fullnamecontroller,
+                      );
+                      // creatuser();
+                      // if (_formKey.currentState!.validate()) {
+                      //   _formKey.currentState!.save();
+                      //   await signUp();
+                      //   Navigator.push(
+                      //     context,
+                      //     MaterialPageRoute(
+                      //       builder: (context) => const mainDashboard(),
+                      //     ),
+                      //   );
+                      // }
                     },
                     child: Container(
                         // width: 200,
@@ -330,32 +375,38 @@ class _signuppageState extends State<signuppage> {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Container(
-                    width: 40.0,
-                    height: 40.0,
-                    decoration: BoxDecoration(
-                        shape: BoxShape.circle,
-                        color: Colors.grey.shade200,
-                        border: Border.all(color: Colors.grey.shade300)),
-                    child: const Icon(
-                      Icons.facebook,
-                      color: Colors.green,
+                  width: 40.0,
+                  height: 40.0,
+                  decoration: BoxDecoration(
+                      shape: BoxShape.circle,
+                      color: Colors.grey.shade200,
+                      border: Border.all(color: Colors.grey.shade300)),
+                  child: Center(
+                    child: FaIcon(
+                      FontAwesomeIcons.google,
+                      color: Colors.yellow.shade600,
                       size: 30,
-                    )),
+                    ),
+                  ),
+                ),
                 const SizedBox(
                   width: 20,
                 ),
                 Container(
-                    width: 40.0,
-                    height: 40.0,
-                    decoration: BoxDecoration(
-                        shape: BoxShape.circle,
-                        color: Colors.grey.shade200,
-                        border: Border.all(color: Colors.grey.shade300)),
-                    child: const Icon(
-                      Icons.facebook,
+                  width: 40.0,
+                  height: 40.0,
+                  decoration: BoxDecoration(
+                      shape: BoxShape.circle,
+                      color: Colors.grey.shade200,
+                      border: Border.all(color: Colors.grey.shade300)),
+                  child: Center(
+                    child: FaIcon(
+                      FontAwesomeIcons.apple,
                       color: Colors.black,
                       size: 30,
-                    )),
+                    ),
+                  ),
+                ),
                 const SizedBox(
                   width: 20,
                 ),

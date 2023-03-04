@@ -60,7 +60,7 @@ class _HelpSupportState extends State<HelpSupport> {
                   ),
                   SizedBox(
                       child: Text(
-                          "We are ready to help so plaease get in touch with us")),
+                          "We are ready to help so  please get in touch with us")),
                   Padding(
                     padding: const EdgeInsets.all(20.0),
                     child: Row(
@@ -94,7 +94,7 @@ class _HelpSupportState extends State<HelpSupport> {
                             SizedBox(
                               height: 3,
                             ),
-                            Text("+234 774677364",
+                            Text("+2349074086050",
                                 style: TextStyle(color: Colors.grey)),
                           ],
                         ),
@@ -134,7 +134,7 @@ class _HelpSupportState extends State<HelpSupport> {
                             SizedBox(
                               height: 3,
                             ),
-                            Text("fraussendtry@gmail.com",
+                            Text("themediator2000@gmail.com",
                                 style: TextStyle(color: Colors.grey)),
                           ],
                         ),
